@@ -14,7 +14,9 @@ namespace Threading
             // UI.Run();
             // new WaitPulse().Run();
             // new MutexOwnership().CanEnsureOwnership();
-            new Scalability().Run();
+            // new Scalability().Run();
+            // new BackgroundVsForeground().Run(true);
+            new Downloader().Run();
         }
     }
 }

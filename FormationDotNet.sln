@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization", "BinarySerialization\BinarySerialization.csproj", "{A8AA04F4-6340-44AF-A801-52249078C194}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "BinarySerialization\Serialization.csproj", "{A8AA04F4-6340-44AF-A801-52249078C194}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxing", "Boxing\Boxing.csproj", "{27FC6621-C911-4694-BF23-38D68C56E612}"
 EndProject
@@ -46,6 +46,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalsVsDoubles", "DecimalsVsDoubles\DecimalsVsDoubles.csproj", "{337BC103-EF30-439A-805C-8058C3B2C86E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP", "FTP\FTP.csproj", "{04E94514-2E4B-4D1F-9965-24A37A411311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip", "Zip\Zip.csproj", "{79F0BC40-AA99-4CB0-98CC-15F66687BE85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -340,6 +344,30 @@ Global
 		{04E94514-2E4B-4D1F-9965-24A37A411311}.Release|Win32.ActiveCfg = Release|x86
 		{04E94514-2E4B-4D1F-9965-24A37A411311}.Release|x86.ActiveCfg = Release|x86
 		{04E94514-2E4B-4D1F-9965-24A37A411311}.Release|x86.Build.0 = Release|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Debug|Win32.ActiveCfg = Debug|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Debug|x86.ActiveCfg = Debug|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Debug|x86.Build.0 = Debug|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Release|Any CPU.ActiveCfg = Release|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Release|Win32.ActiveCfg = Release|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Release|x86.ActiveCfg = Release|x86
+		{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}.Release|x86.Build.0 = Release|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Debug|Win32.ActiveCfg = Debug|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Debug|x86.ActiveCfg = Debug|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Debug|x86.Build.0 = Debug|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Release|Any CPU.ActiveCfg = Release|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Release|Mixed Platforms.Build.0 = Release|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Release|Win32.ActiveCfg = Release|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Release|x86.ActiveCfg = Release|x86
+		{79F0BC40-AA99-4CB0-98CC-15F66687BE85}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -73,5 +73,19 @@ namespace BinarySerialization
 
             AssertEquals(data, copy);
         }
+
+        [Test]
+        public void CanBase64Encode()
+        {
+            IEnumerable<OHLC> inData = GetData();
+
+            string base64 = Convert.ToBase64String(inData.ToNetBinary());
+
+            Console.WriteLine("Quotes encoded in base 64:\n{0}", base64);
+
+            IEnumerable<OHLC> outData = Convert.FromBase64String(base64).FromNetBinary<IEnumerable<OHLC>>();
+
+            AssertEquals(inData, outData);
+        }
     }
 }
