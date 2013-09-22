@@ -13,7 +13,8 @@ namespace Threading
             // Priorities.Run();
             // UI.Run();
             // new WaitPulse().Run();
-            new MutexOwnership().CanEnsureOwnership();
+            // new MutexOwnership().CanEnsureOwnership();
+            new Scalability().Run();
         }
     }
 }
