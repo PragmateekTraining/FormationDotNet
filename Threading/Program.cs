@@ -16,7 +16,8 @@ namespace Threading
             // new MutexOwnership().CanEnsureOwnership();
             // new Scalability().Run();
             // new BackgroundVsForeground().Run(true);
-            new Downloader().Run();
+            // new Downloader().Run();
+            new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
         }
     }
 }

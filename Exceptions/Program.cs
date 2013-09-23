@@ -57,7 +57,8 @@ namespace Exceptions
         [STAThread]
         static void Main(string[] args)
         {
-            RunWpf();
+            // RunWpf();
+            new RethrowSample(args.Length == 1 && args[0] == "rethrow").Run();
         }
     }
 }

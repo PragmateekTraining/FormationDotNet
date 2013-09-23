@@ -9,6 +9,7 @@ namespace ValueTypes
     {
         static void Main(string[] args)
         {
+            new BulkAllocation().MeasureOverhead();
         }
     }
 }
