@@ -1,11 +1,12 @@
 ﻿using System;
 using NUnit.Framework;
 using System.Diagnostics;
+using SamplesAPI;
 
 namespace Boxing
 {
     [TestFixture]
-    class Tests
+    public class PerformanceSample : ISample
     {
         [Test]
         public void CanEvaluateBoxingPerformance()
@@ -43,6 +44,11 @@ namespace Boxing
             Console.WriteLine("With boxing: {0} (x{1})", t2, ratio);
 
             Assert.GreaterOrEqual(ratio, 10);
+        }
+
+        public void Run()
+        {
+            CanEvaluateBoxingPerformance();
         }
 
     }

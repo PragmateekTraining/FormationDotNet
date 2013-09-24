@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Reflection;
-using System.Security;
-using System.IO;
-using System.Security.Policy;
+using SamplesAPI;
 
 namespace AppDomainSamples
 {
@@ -24,9 +18,16 @@ namespace AppDomainSamples
         }
     }
 
-    public class AddinsSample
+    public class AddinsSample : ISample
     {
-        internal void Run(bool createNewAppDomain)
+        bool createNewAppDomain = false;
+
+        public AddinsSample(bool createNewAppDomain)
+        {
+            this.createNewAppDomain = createNewAppDomain;
+        }
+
+        public void Run()
         {
             AppDomain appDomain = AppDomain.CurrentDomain;
 

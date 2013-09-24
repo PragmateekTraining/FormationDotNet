@@ -2,6 +2,7 @@
 using System.IO;
 using System.Security;
 using System.Security.Permissions;
+using SamplesAPI;
 
 namespace AppDomainSamples
 {
@@ -16,9 +17,16 @@ namespace AppDomainSamples
         }
     }
 
-    class SecuritySample
+    public class SecuritySample : ISample
     {
-        public void Run(bool restrict)
+        bool restrict = false;
+
+        public SecuritySample(bool restrict)
+        {
+            this.restrict = restrict;
+        }
+
+        public void Run()
         {
             AppDomainSetup sandboxSetup = new AppDomainSetup
             {

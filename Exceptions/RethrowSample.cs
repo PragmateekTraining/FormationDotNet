@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SamplesAPI;
 
 namespace Exceptions
 {
-    class RethrowSample
+    public class RethrowSample : ISample
     {
         bool rethrow = false;
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "BinarySerialization\Serialization.csproj", "{A8AA04F4-6340-44AF-A801-52249078C194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxing", "Boxing\Boxing.csproj", "{27FC6621-C911-4694-BF23-38D68C56E612}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingSamples", "Boxing\BoxingSamples.csproj", "{27FC6621-C911-4694-BF23-38D68C56E612}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTypes", "ValueTypes\ValueTypes.csproj", "{46E642E8-825E-4DAC-A5A7-85810521E65F}"
 EndProject
@@ -43,11 +43,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAPI", "ChatAPI\ChatAPI.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder", "StringBuilder\StringBuilder.csproj", "{B276E83B-5693-4107-A65D-8511E19C96C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalsVsDoubles", "DecimalsVsDoubles\DecimalsVsDoubles.csproj", "{337BC103-EF30-439A-805C-8058C3B2C86E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalsVsDoublesSamples", "DecimalsVsDoubles\DecimalsVsDoublesSamples.csproj", "{337BC103-EF30-439A-805C-8058C3B2C86E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP", "FTP\FTP.csproj", "{04E94514-2E4B-4D1F-9965-24A37A411311}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsSamples", "Exceptions\ExceptionsSamples.csproj", "{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip", "Zip\Zip.csproj", "{79F0BC40-AA99-4CB0-98CC-15F66687BE85}"
 EndProject
@@ -56,6 +56,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSMQLogger", "MSMQLogger\MSMQLogger.csproj", "{E54EB681-0164-47A2-A76D-8A50DABD18C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDomainSamples", "AppDomain\AppDomainSamples.csproj", "{C05C19A9-73D6-4C57-8846-12C03D80B372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplesAPI", "SamplesAPI\SamplesAPI.csproj", "{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -410,6 +412,18 @@ Global
 		{C05C19A9-73D6-4C57-8846-12C03D80B372}.Release|Win32.ActiveCfg = Release|x86
 		{C05C19A9-73D6-4C57-8846-12C03D80B372}.Release|x86.ActiveCfg = Release|x86
 		{C05C19A9-73D6-4C57-8846-12C03D80B372}.Release|x86.Build.0 = Release|x86
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Win32.ActiveCfg = Release|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
