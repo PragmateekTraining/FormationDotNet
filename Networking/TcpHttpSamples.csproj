@@ -50,8 +50,14 @@
     <Compile Include="HttpResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="TcpHttpSample.cs" />
     <Compile Include="HttpClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SamplesAPI\SamplesAPI.csproj">
+      <Project>{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}</Project>
+      <Name>SamplesAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

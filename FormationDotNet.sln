@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Thre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deamon", "Deamon\Deamon.csproj", "{E8F2DFE8-013E-4A45-8B97-28AFA337F9FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "Networking\WebClient.csproj", "{2C080F92-3558-4043-8866-B7A80D91FF03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpHttpSamples", "Networking\TcpHttpSamples.csproj", "{2C080F92-3558-4043-8866-B7A80D91FF03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogs", "EventLogs\EventLogs.csproj", "{3DEAF231-E69D-4958-99F5-0B6178BAC9D7}"
 EndProject
@@ -41,11 +41,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatTests", "ChatTests\Chat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAPI", "ChatAPI\ChatAPI.csproj", "{F91E8282-F348-4212-971D-46E163ACB2CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder", "StringBuilder\StringBuilder.csproj", "{B276E83B-5693-4107-A65D-8511E19C96C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderSamples", "StringBuilder\StringBuilderSamples.csproj", "{B276E83B-5693-4107-A65D-8511E19C96C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalsVsDoublesSamples", "DecimalsVsDoubles\DecimalsVsDoublesSamples.csproj", "{337BC103-EF30-439A-805C-8058C3B2C86E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP", "FTP\FTP.csproj", "{04E94514-2E4B-4D1F-9965-24A37A411311}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpSamples", "FTP\FtpSamples.csproj", "{04E94514-2E4B-4D1F-9965-24A37A411311}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsSamples", "Exceptions\ExceptionsSamples.csproj", "{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}"
 EndProject
@@ -417,7 +417,8 @@ Global
 		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|x86.ActiveCfg = Debug|x86
+		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Debug|x86.Build.0 = Debug|x86
 		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39F2B3D1-179E-439D-96C6-6B9C74C47BD3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
