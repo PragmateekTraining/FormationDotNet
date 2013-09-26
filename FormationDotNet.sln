@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deamon", "Deamon\Deamon.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpHttpSamples", "Networking\TcpHttpSamples.csproj", "{2C080F92-3558-4043-8866-B7A80D91FF03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogs", "EventLogs\EventLogs.csproj", "{3DEAF231-E69D-4958-99F5-0B6178BAC9D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogsSamples", "EventLogs\EventLogsSamples.csproj", "{3DEAF231-E69D-4958-99F5-0B6178BAC9D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsRegistrySamples", "Registry\WindowsRegistrySamples.csproj", "{6ADD9471-C85D-4447-8E81-94CA6699CC00}"
 EndProject
