@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using SamplesAPI;
 using System.Security;
 using System.Security.Permissions;
@@ -14,15 +11,15 @@ namespace AppDomainSamples
         public class User
         {
             public string Name { get; private set; }
-private const string PASSWORD = "secret";
-private string password = "secret";
-private string Password
-{
-    get
-    {
-        return "secret";
-    }
-}
+            private const string PASSWORD = "secret";
+            private string password = "secret";
+            private string Password
+            {
+                get
+                {
+                    return "secret";
+                }
+            }
 
             public static User Current
             {
