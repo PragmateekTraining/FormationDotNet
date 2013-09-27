@@ -10,7 +10,16 @@ namespace AppDomainSamples
         static void Main(string[] args)
         {
             // new AddinsSample().Run(args.Length == 1 && args[0] == "new");
-            // new SecuritySample(args.Length == 1 && args[0] == "restrict").Run();
+            if (args.Length >= 1)
+            {
+                if (args[0] == "reflection")
+                {
+                    bool restrict = args.Length == 2 && args[1] == "restrict";
+
+                    new ReflectionSample(restrict).Run();
+                }
+                // new SecuritySample(args.Length == 1 && args[0] == "restrict").Run();
+            }
         }
     }
 }

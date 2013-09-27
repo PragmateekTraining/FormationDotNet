@@ -6,19 +6,18 @@ using SamplesAPI;
 
 namespace AppDomainSamples
 {
-    //[Serializable]
-    public class Virus : MarshalByRefObject
-    {
-        public void RunMe()
-        {
-            Console.WriteLine("Ahahahahahaaahahahahah");
-            string password = File.ReadAllText("my_password.txt");
-            Console.WriteLine("Password is '{0}'.", password);
-        }
-    }
-
     public class SecuritySample : ISample
     {
+        public class Virus : MarshalByRefObject
+        {
+            public void RunMe()
+            {
+                Console.WriteLine("Ahahahahahaaahahahahah");
+                string password = File.ReadAllText("my_password.txt");
+                Console.WriteLine("Password is '{0}'.", password);
+            }
+        }
+
         bool restrict = false;
 
         public SecuritySample(bool restrict)
@@ -43,7 +42,7 @@ namespace AppDomainSamples
             // PolicyLevel pl = PolicyLevel.CreateAppDomainLevel();
             // new PolicyStatement(permissions)
             // sandbox.SetAppDomainPolicy();
-            Virus virus = sandbox.CreateInstanceAndUnwrap("AppDomainSamples", "AppDomainSamples.Virus") as Virus;
+            Virus virus = sandbox.CreateInstanceAndUnwrap("AppDomainSamples", "AppDomainSamples.SecuritySample+Virus") as Virus;
 
             try
             {
