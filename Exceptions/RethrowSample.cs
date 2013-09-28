@@ -1,7 +1,7 @@
 ﻿using System;
 using SamplesAPI;
 
-namespace Exceptions
+namespace ExceptionsSamples
 {
     public class RethrowSample : ISample
     {
