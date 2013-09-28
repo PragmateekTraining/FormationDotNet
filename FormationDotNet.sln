@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "BinarySerialization\Serialization.csproj", "{A8AA04F4-6340-44AF-A801-52249078C194}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationSamples", "BinarySerialization\SerializationSamples.csproj", "{A8AA04F4-6340-44AF-A801-52249078C194}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingSamples", "Boxing\BoxingSamples.csproj", "{27FC6621-C911-4694-BF23-38D68C56E612}"
 EndProject
