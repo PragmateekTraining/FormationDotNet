@@ -59,10 +59,13 @@
     <Content Include="A.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Compile Include="BinarySerializationSample.cs" />
+    <Compile Include="Base64EncodingSample.cs" />
+    <Compile Include="DeepCloneSample.cs" />
     <Compile Include="OHLC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="Common.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GOOG_prices.csv">

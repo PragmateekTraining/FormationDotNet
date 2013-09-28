@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Globalization;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using NUnit.Framework;
 
-namespace BinarySerialization
+namespace SerializationSamples
 {
-    [TestFixture]
-    class Tests
+    public class Common
     {
-        static IEnumerable<OHLC> GetData()
+        public static IEnumerable<OHLC> GetData()
         {
             return File.ReadAllLines("GOOG_prices.csv")
                        .Skip(1)
@@ -29,7 +26,7 @@ namespace BinarySerialization
                        .ToList();
         }
 
-        static void AssertEquals(IEnumerable<OHLC> inData, IEnumerable<OHLC> outData)
+        public static void AssertEquals(IEnumerable<OHLC> inData, IEnumerable<OHLC> outData)
         {
             foreach (OHLC inOHLC in inData)
             {
@@ -42,50 +39,6 @@ namespace BinarySerialization
                 Assert.AreEqual(inOHLC.Close, outOHLC.Close);
                 Assert.AreEqual(inOHLC.Volume, outOHLC.Volume);
             }
-        }
-
-        [Test]
-        public void CanBinarySerializeQuotes()
-        {
-            IFormatter formatter = new BinaryFormatter();
-
-            IEnumerable<OHLC> inData = GetData();
-
-            using (Stream stream = File.OpenWrite("GOOG_prices.dat"))
-            {
-                formatter.Serialize(stream, inData);
-            }
-
-            IEnumerable<OHLC> outData = null;
-            using (Stream stream = File.OpenRead("GOOG_prices.dat"))
-            {
-                outData = formatter.Deserialize(stream) as IEnumerable<OHLC>;
-            }
-
-            AssertEquals(inData, outData);
-        }
-
-        [Test]
-        public void CanDeepClone()
-        {
-            IEnumerable<OHLC> data = GetData();
-            IEnumerable<OHLC> copy = data.DeepClone();
-
-            AssertEquals(data, copy);
-        }
-
-        [Test]
-        public void CanBase64Encode()
-        {
-            IEnumerable<OHLC> inData = GetData();
-
-            string base64 = Convert.ToBase64String(inData.ToNetBinary());
-
-            Console.WriteLine("Quotes encoded in base 64:\n{0}", base64);
-
-            IEnumerable<OHLC> outData = Convert.FromBase64String(base64).FromNetBinary<IEnumerable<OHLC>>();
-
-            AssertEquals(inData, outData);
         }
     }
 }

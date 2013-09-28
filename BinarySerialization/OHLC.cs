@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace BinarySerialization
+namespace SerializationSamples
 {
     [Serializable]
-    class OHLC
+    public class OHLC
     {
         public DateTime Date { get; set; }
         public decimal Open { get; set; }
