@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClrSamples", "ClrSamples\Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILMergeSamples", "ILMergeSamples\ILMergeSamples.csproj", "{2B902B05-2385-4610-8765-031D490DCA83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionSamples", "ReflectionSamples\ReflectionSamples.csproj", "{217BE547-9322-4B8F-B76A-2216E0CCC4A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -509,6 +511,18 @@ Global
 		{2B902B05-2385-4610-8765-031D490DCA83}.Release|Win32.ActiveCfg = Release|x86
 		{2B902B05-2385-4610-8765-031D490DCA83}.Release|x86.ActiveCfg = Release|x86
 		{2B902B05-2385-4610-8765-031D490DCA83}.Release|x86.Build.0 = Release|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Debug|Win32.ActiveCfg = Debug|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Debug|x86.ActiveCfg = Debug|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Debug|x86.Build.0 = Debug|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|Any CPU.ActiveCfg = Release|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|Mixed Platforms.Build.0 = Release|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|Win32.ActiveCfg = Release|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|x86.ActiveCfg = Release|x86
+		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
