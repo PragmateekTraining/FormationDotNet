@@ -1,6 +1,6 @@
-﻿.assembly Test
-{
-}
+﻿.assembly Test {}
+
+.assembly extern mscorlib {}
 
 .method static valuetype [mscorlib]System.Byte F()
 {

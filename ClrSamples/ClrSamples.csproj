@@ -43,11 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsComplianceSample.cs" />
+    <Compile Include="PEVerifySample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReturnTypeOverloadsSamples.cs" />
+    <Compile Include="ReturnTypeOverloadsSample.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="PEVerify.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="safe.il">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="unsafe.il">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="test.il">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -58,9 +69,16 @@
       <Name>SamplesAPI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="PEVerify.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>ilasm.exe test.il</PostBuildEvent>
+    <PostBuildEvent>ilasm.exe test.il
+ilasm.exe safe.il
+ilasm.exe unsafe.il</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

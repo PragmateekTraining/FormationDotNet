@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace ClrSamples
 {
-    public class ReturnTypeOverloadsSamples : ISample
+    public class ReturnTypeOverloadsSample : ISample
     {
         public void Run()
         {
