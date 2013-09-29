@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            new PEVerifySample().Run();
+            // new PEVerifySample().Run();
+            new UninitializedMemorySample().Run();
         }
     }
 }

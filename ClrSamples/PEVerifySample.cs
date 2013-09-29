@@ -10,7 +10,7 @@ namespace ClrSamples
         {
             string peverifyPath = @"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\peverify.exe";
 
-            Process safePEVerify = new Process
+            /*Process safePEVerify = new Process
             {
                 StartInfo = new ProcessStartInfo(peverifyPath, "safe.exe")
                 {
@@ -19,11 +19,13 @@ namespace ClrSamples
             };
 
             safePEVerify.Start();
-            safePEVerify.WaitForExit();
+            safePEVerify.WaitForExit();*/
+
+            Tools.RunAndWait(peverifyPath, "safe.exe");
 
             Console.WriteLine("==========");
 
-            Process unsafePEVerify = new Process
+            /*Process unsafePEVerify = new Process
             {
                 StartInfo = new ProcessStartInfo(peverifyPath, "unsafe.exe")
                 {
@@ -32,7 +34,9 @@ namespace ClrSamples
             };
 
             unsafePEVerify.Start();
-            unsafePEVerify.WaitForExit();
+            unsafePEVerify.WaitForExit();*/
+
+            Tools.RunAndWait(peverifyPath, "unsafe.exe");
         }
     }
 }

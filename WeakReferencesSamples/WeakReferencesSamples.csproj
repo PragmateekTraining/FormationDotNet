@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DE6B0191-C378-426D-8D59-BE1A529E7B0C}</ProjectGuid>
+    <ProjectGuid>{E3B21E63-41D1-4C5C-AAF5-1E4AAE77C849}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClrSamples</RootNamespace>
-    <AssemblyName>ClrSamples</AssemblyName>
+    <RootNamespace>WeakReferencesSamples</RootNamespace>
+    <AssemblyName>WeakReferencesSamples</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -32,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,29 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsComplianceSample.cs" />
-    <Compile Include="UninitializedMemorySample.cs" />
-    <Compile Include="PEVerifySample.cs" />
+    <Compile Include="A.cs" />
+    <Compile Include="CachingSample.cs" />
+    <Compile Include="CircularReferenceSample.cs" />
+    <Compile Include="BasicSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReturnTypeOverloadsSample.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PEVerify.exe.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="safe.il">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="uninitialized.il">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="unsafe.il">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="test.il">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Compile Include="WeakReference.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SamplesAPI\SamplesAPI.csproj">
@@ -73,18 +58,7 @@
       <Name>SamplesAPI</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="PEVerify.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>ilasm.exe test.il
-ilasm.exe safe.il
-ilasm.exe unsafe.il
-"\Windows\Microsoft.Net\Framework\v2.0.50727\ilasm.exe" uninitialized.il</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
