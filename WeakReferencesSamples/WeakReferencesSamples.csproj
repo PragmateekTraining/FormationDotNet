@@ -52,6 +52,7 @@
     <Compile Include="CachingSample.cs" />
     <Compile Include="CircularReferenceSample.cs" />
     <Compile Include="BasicSample.cs" />
+    <Compile Include="LegacyEventHandlerSample.cs" />
     <Compile Include="EventHandlerSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,7 +7,8 @@
             // new BasicSample().Run();
             // new CircularReferenceSample().Run();
             // new CachingSample().Run();
-            new EventHandlerSample().Run();
+            // new EventHandlerSample().Run();
+            new LegacyEventHandlerSample().Run();
         }
     }
 }
