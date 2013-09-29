@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPCClient", "IPCClient\IPCC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NativeLibrary", "NativeLibrary\NativeLibrary.vcxproj", "{3E187D4A-6450-4A09-A448-83775DD02202}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke", "PInvoke\PInvoke.csproj", "{B2E595B0-DBA3-46C8-BD00-DBEF619604FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvokeSamples", "PInvoke\PInvokeSamples.csproj", "{B2E595B0-DBA3-46C8-BD00-DBEF619604FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticConstructor", "StaticConstructor\StaticConstructor.csproj", "{2D05C51C-0AFB-403C-A277-6D3D3F4F481E}"
 EndProject
@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpSamples", "FTP\FtpSample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsSamples", "Exceptions\ExceptionsSamples.csproj", "{EFA01C7A-FC3D-4BDD-BE2F-D4404CBFD824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip", "Zip\Zip.csproj", "{79F0BC40-AA99-4CB0-98CC-15F66687BE85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipSamples", "Zip\ZipSamples.csproj", "{79F0BC40-AA99-4CB0-98CC-15F66687BE85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSMQClient", "MSMQ\MSMQClient.csproj", "{ED96C3EB-3697-481E-BEA8-08EEB186B8C5}"
 EndProject
@@ -70,6 +70,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILMergeSamples", "ILMergeSamples\ILMergeSamples.csproj", "{2B902B05-2385-4610-8765-031D490DCA83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionSamples", "ReflectionSamples\ReflectionSamples.csproj", "{217BE547-9322-4B8F-B76A-2216E0CCC4A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chat", "Chat", "{F8C77224-DD0C-407C-827B-AC823701A134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotchasSamples", "GotchasSamples\GotchasSamples.csproj", "{F12E2EFC-983A-491E-B117-45E8DA22F88E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -509,8 +513,27 @@ Global
 		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|Win32.ActiveCfg = Release|x86
 		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|x86.ActiveCfg = Release|x86
 		{217BE547-9322-4B8F-B76A-2216E0CCC4A2}.Release|x86.Build.0 = Release|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Debug|Win32.ActiveCfg = Debug|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Debug|x86.ActiveCfg = Debug|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Debug|x86.Build.0 = Debug|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Release|Any CPU.ActiveCfg = Release|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Release|Win32.ActiveCfg = Release|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Release|x86.ActiveCfg = Release|x86
+		{F12E2EFC-983A-491E-B117-45E8DA22F88E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F91E8282-F348-4212-971D-46E163ACB2CF} = {F8C77224-DD0C-407C-827B-AC823701A134}
+		{BA39CE86-07BC-461A-BE99-E7EB9D578801} = {F8C77224-DD0C-407C-827B-AC823701A134}
+		{A3A7998D-FC6E-4208-B314-B64F3AA75D54} = {F8C77224-DD0C-407C-827B-AC823701A134}
+		{DEEC0B05-2650-408B-842D-E635C8BB8B61} = {F8C77224-DD0C-407C-827B-AC823701A134}
+		{F555CB91-656D-4D49-A3B2-5C55C45FA05C} = {F8C77224-DD0C-407C-827B-AC823701A134}
 	EndGlobalSection
 EndGlobal
