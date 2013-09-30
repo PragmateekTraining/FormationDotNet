@@ -8,7 +8,7 @@ namespace WeakReferencesSamples
     {
         public class EventManager : WeakEventManager
         {
-            private EventManager()
+            /*private EventManager()
             {
             }
 
@@ -27,7 +27,24 @@ namespace WeakReferencesSamples
                 {
                     return WeakEventManager.GetCurrentManager(typeof(EventManager)) as EventManager;
                 }
+            }*/
+
+            private static EventManager CurrentManager
+            {
+                get
+                {
+                    EventManager manager = (EventManager)GetCurrentManager(typeof(EventManager));
+
+                    if (manager == null)
+                    {
+                        manager = new EventManager();
+                        SetCurrentManager(typeof(EventManager), manager);
+                    }
+
+                    return manager;
+                }
             }
+
 
             public static void AddListener(EventSource source, IWeakEventListener listener)
             {
