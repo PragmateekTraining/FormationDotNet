@@ -23,7 +23,7 @@ namespace PInvokeSamples
             Console.WriteLine(Rand());
         }
 
-        [DllImport("NativeLibrary.dll", EntryPoint = "super_fast_add")]
+        [DllImport("NativeLibrary.dll", EntryPoint = "super_fast_add", CallingConvention = CallingConvention.Cdecl)]
         private static extern int Add(int a, int b);
 
         [Test]

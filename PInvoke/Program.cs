@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             // new Tests().CanDisplaySomeText();
-            new MemoryAlignmentSample().Run();
+            // new MemoryAlignmentSample().Run();
+            new UnionSample().Run();
         }
     }
 }
