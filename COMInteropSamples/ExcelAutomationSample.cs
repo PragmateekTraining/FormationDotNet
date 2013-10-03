@@ -8,8 +8,8 @@ namespace COMInteropSamples
         public void Run()
         {
             Type type = Type.GetTypeFromProgID("Excel.Application");
-            dynamic excel = Activator.CreateInstance(type);
-            excel.Visible = true;
+            /*dynamic excel = Activator.CreateInstance(type);
+            excel.Visible = true;*/
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿[uuid(5BF6021B-67AE-4D8E-93EC-249AF0B5A283)]
+library ComLoggerLib
+{
+	[uuid(F0CE8DD2-AE05-435B-AEB5-038EA4A1191B)]
+	interface IComLogger : IUnknown
+	{
+		void Log(BSTR message);
+	};
+
+	[uuid(8A49257F-D5E9-47DB-B87D-E09EBAF199AE)]
+	coclass ComLogger
+	{
+		interface IComLogger;
+	};
+}

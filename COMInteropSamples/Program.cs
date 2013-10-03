@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace COMInteropSamples
 {
     class Program
     {
+        // [STAThread]
         static void Main(string[] args)
         {
-            new ExcelAutomationSample().Run();
+            // new ExcelAutomationSample().Run();
+            // Console.WriteLine(Environment.UserName);
+            new NativeCOMSample("azertyuyiiop!").Run();
         }
     }
 }

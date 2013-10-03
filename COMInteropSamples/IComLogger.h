@@ -1,0 +1,12 @@
+﻿#include <Windows.h>
+
+// {F0CE8DD2-AE05-435B-AEB5-038EA4A1191B}
+const GUID IID_IComLogger = { 0xf0ce8dd2, 0xae05, 0x435b, { 0xae, 0xb5, 0x3, 0x8e, 0xa4, 0xa1, 0x19, 0x1b } };
+// {8A49257F-D5E9-47DB-B87D-E09EBAF199AE}
+const GUID CLSID_ComLogger = { 0x8a49257f, 0xd5e9, 0x47db, { 0xb8, 0x7d, 0xe0, 0x9e, 0xba, 0xf1, 0x99, 0xae } };
+
+
+class IComLogger : public IUnknown
+{
+	public: virtual void __stdcall Log(BSTR message) = 0;
+};

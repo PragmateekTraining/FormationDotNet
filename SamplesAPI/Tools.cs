@@ -5,7 +5,7 @@ namespace SamplesAPI
 {
     public class Tools
     {
-        public static void RunAndWait(string exe, string args = null, bool echo = true)
+        public static void RunAndWait(string exe, string args = null, bool echo = true, bool useShellExecute = false)
         {
             if (echo)
             {
@@ -26,7 +26,7 @@ namespace SamplesAPI
             {
                 StartInfo = new ProcessStartInfo(exe, args)
                 {
-                    UseShellExecute = false
+                    UseShellExecute = useShellExecute,
                 }
             };
 

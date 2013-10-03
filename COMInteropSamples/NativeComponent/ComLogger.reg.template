@@ -1,0 +1,20 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{8A49257F-D5E9-47DB-B87D-E09EBAF199AE}]
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{8A49257F-D5E9-47DB-B87D-E09EBAF199AE}\InprocServer32]
+@="{{dll_path}}"
+"ThreadingModel"="Both"
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\Interface\{F0CE8DD2-AE05-435B-AEB5-038EA4A1191B}]
+@="IComLogger"
+
+[HKEY_CURRENT_USER\Software\Classes\TypeLib\{5BF6021B-67AE-4D8E-93EC-249AF0B5A283}]
+
+[HKEY_CURRENT_USER\Software\Classes\TypeLib\{5BF6021B-67AE-4D8E-93EC-249AF0B5A283}\1.0]
+@="ComLogger"
+
+[HKEY_CURRENT_USER\Software\Classes\TypeLib\{5BF6021B-67AE-4D8E-93EC-249AF0B5A283}\1.0\0]
+
+[HKEY_CURRENT_USER\Software\Classes\TypeLib\{5BF6021B-67AE-4D8E-93EC-249AF0B5A283}\1.0\0\win32]
+@="{{tlb_path}}"
