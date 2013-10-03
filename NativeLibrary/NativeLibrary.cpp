@@ -5,8 +5,8 @@ typedef union
 {
 	struct
 	{
-		int8_t LSB;
-		int8_t MSB;
+		int8_t FirstByte;
+		int8_t SecondByte;
 	};
 	int16_t Value;
 } MyShort;
@@ -20,6 +20,6 @@ extern "C"
 
 	__declspec(dllexport) void dump(MyShort myShort)
 	{
-		printf("{ [%d, %d], %d }\n", myShort.MSB, myShort.LSB, myShort.Value);
+		printf("{ [%d, %d], %d }\n", myShort.FirstByte, myShort.SecondByte, myShort.Value);
 	}
 }

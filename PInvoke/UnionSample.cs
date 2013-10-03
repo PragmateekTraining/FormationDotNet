@@ -13,16 +13,16 @@ namespace PInvokeSamples
         struct MyShort
         {
             [FieldOffset(0)]
-            public byte LSB;
+            public byte FirstByte;
             [FieldOffset(1)]
-            public byte MSB;
+            public byte SecondByte;
             [FieldOffset(0)]
             public short Value;
         }
 
         public void Run()
         {
-            MyShort myShort = new MyShort { MSB = 1 };
+            MyShort myShort = new MyShort { Value = 1 };
             Dump(myShort);
         }
     }
