@@ -9,7 +9,8 @@ namespace GenericsSamples
     {
         static void Main(string[] args)
         {
-            new CastingSample().Run();
+            // new CastingSample().Run();
+            new IldasmSample().Run();
         }
     }
 }
