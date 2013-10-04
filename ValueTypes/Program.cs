@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ValueTypes
+﻿namespace ValueTypesSamples
 {
     class Program
     {
         static void Main(string[] args)
         {
-            new BulkAllocation().MeasureOverhead();
+            // new BulkAllocationSample().Run();
+            new EqualsOverloadSample(1000000).Run();
+            // new DefaultComparisonSample().Run();
         }
     }
 }

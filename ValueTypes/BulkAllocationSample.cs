@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
+using SamplesAPI;
 
-namespace ValueTypes
+namespace ValueTypesSamples
 {
-    class BulkAllocation
+    public class BulkAllocationSample : ISample
     {
         class Reference
         {
@@ -16,7 +14,7 @@ namespace ValueTypes
         {
         }
 
-        internal void MeasureOverhead()
+        public void Run()
         {
             const int N = 10000000;
 

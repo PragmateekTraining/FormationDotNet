@@ -64,11 +64,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BulkAllocation.cs" />
+    <Compile Include="BulkAllocationSample.cs" />
+    <Compile Include="DefaultComparisonSample.cs" />
+    <Compile Include="EqualsOverloadSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportingID.cs" />
     <Compile Include="Tests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SamplesAPI\SamplesAPI.csproj">
+      <Project>{39f2b3d1-179e-439d-96c6-6b9c74c47bd3}</Project>
+      <Name>SamplesAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
