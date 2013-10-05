@@ -6,7 +6,7 @@ namespace ReflectionSamples
     {
         static void Main(string[] args)
         {
-            if (args.Length == 2)
+            /*if (args.Length == 2)
             {
                 if (args[0] == "performance")
                 {
@@ -14,7 +14,9 @@ namespace ReflectionSamples
 
                     new PerformanceSample(n).Run();
                 }
-            }
+            }*/
+
+            new EmitSample().Run();
         }
     }
 }
