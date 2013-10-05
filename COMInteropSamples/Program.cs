@@ -8,7 +8,8 @@ namespace COMInteropSamples
         {
             // new ExcelAutomationSample().Run();
             // Console.WriteLine(Environment.UserName);
-            new NativeCOMSample("azertyuyiiop!").Run();
+            // new NativeCOMSample("azertyuyiiop!").Run();
+            new CSComponentSample().Run();
         }
     }
 }
