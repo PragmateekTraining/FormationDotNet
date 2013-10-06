@@ -5,18 +5,18 @@ using System.Text.RegularExpressions;
 
 namespace RegexSamples
 {
-    public class BacktrackingSample : ISample
+    public class AnchorsSample : ISample
     {
         public void Run()
         {
-            Regex noBacktrackingRegex = new Regex("ab", RegexOptions.Compiled);
-            Regex backtrackingRegex = new Regex("a+b", RegexOptions.Compiled);
+            Regex noAnchorsRegex = new Regex("a+b", RegexOptions.Compiled);
+            Regex withAnchorsRegex = new Regex("^a+b$", RegexOptions.Compiled);
 
             const int maxInputSize = 100;
             const int n = 1000;
 
-            backtrackingRegex.Match("a");
-            noBacktrackingRegex.Match("a");
+            noAnchorsRegex.Match("a");
+            withAnchorsRegex.Match("a");
 
             string input = "";
             Stopwatch stopwatch = new Stopwatch();
@@ -27,22 +27,22 @@ namespace RegexSamples
                 stopwatch.Restart();
                 for (int i = 0; i < n; ++i)
                 {
-                    noBacktrackingRegex.Match(input);
+                    noAnchorsRegex.Match(input);
                 }
                 stopwatch.Stop();
 
-                TimeSpan noBacktrackingTime = stopwatch.Elapsed;
+                TimeSpan noAnchorsTime = stopwatch.Elapsed;
 
                 stopwatch.Restart();
                 for (int i = 0; i < n; ++i)
                 {
-                    backtrackingRegex.Match(input);
+                    withAnchorsRegex.Match(input);
                 }
                 stopwatch.Stop();
 
-                TimeSpan backtrackingTime = stopwatch.Elapsed;
+                TimeSpan withAnchorsTime = stopwatch.Elapsed;
 
-                Console.WriteLine("{0}\t{1}", noBacktrackingTime.Ticks, backtrackingTime.Ticks);
+                Console.WriteLine("{0}\t{1}", noAnchorsTime.Ticks, withAnchorsTime.Ticks);
             }
         }
     }
