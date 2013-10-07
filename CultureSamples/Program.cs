@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            new InconsistentCulturesSample().Run();
+            // new InconsistentCulturesSample().Run();
+            new NumbersInconsistentCulturesSample().Run();
         }
     }
 }
