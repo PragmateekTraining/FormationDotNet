@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CppCLIWrapperSamples
+namespace Wrapper
 {
-    public class Logger
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
