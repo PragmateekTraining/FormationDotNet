@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            new UsingStatementDisassemblingSample().Run();
+            // new UsingStatementDisassemblingSample().Run();
+            new EventHandlerSample().Run();
         }
     }
 }

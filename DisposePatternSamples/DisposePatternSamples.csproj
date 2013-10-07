@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventHandlerSample.cs" />
     <Compile Include="UsingStatementDisassemblingSample.cs" />
     <Compile Include="UsingStatementSample.cs" />
     <Compile Include="Program.cs" />
