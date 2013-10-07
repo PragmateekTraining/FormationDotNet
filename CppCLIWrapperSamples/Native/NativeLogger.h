@@ -1,12 +1,14 @@
 ﻿#include <string>
 
+#ifdef BUILDING_NATIVE_DLL
+#define DLLAPI __declspec(dllexport)
+#else
+#define DLLAPI __declspec(dllimport)
+#endif
+
 namespace native
 {
-	class
-#ifndef __cplusplus_cli
-	__declspec(dllexport)
-#endif
-	Logger
+	class DLLAPI Logger
 	{
 		private: std::string path;
 		public: void set_path(std::string message);

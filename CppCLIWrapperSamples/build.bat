@@ -2,7 +2,7 @@ CALL "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\vsvars32
 
 CD Native
 ECHO "Compiling native logger..."
-CL /LD NativeLogger.cpp
+CL /DBUILDING_NATIVE_DLL /LD NativeLogger.cpp
 ECHO "Native logger compiled."
 
 CD ..
