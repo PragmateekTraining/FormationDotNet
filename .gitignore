@@ -2,3 +2,4 @@ bin/
 obj/
 NativeLibrary/Debug/
 *.opensdf
+Tools/
