@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ServiceModel;
 
 namespace IPCLogger
@@ -11,11 +8,15 @@ namespace IPCLogger
         static void Main(string[] args)
         {
             string address = "net.pipe://localhost/logger";
-            ServiceHost host = new ServiceHost(new Logger(args[0]), new Uri(address));
-            host.AddServiceEndpoint(typeof(ILogger), new NetNamedPipeBinding(), address);
-            host.Open();
-            Console.WriteLine("Press enter to stop logger...");
-            Console.ReadLine();
+
+            using (ServiceHost host = new ServiceHost(new Logger(args[0]), new Uri(address)))
+            {
+                host.AddServiceEndpoint(typeof(ILogger), new NetNamedPipeBinding(), address);
+                host.Open();
+
+                Console.WriteLine("Press enter to stop logger...");
+                Console.ReadLine();
+            }
         }
     }
 }

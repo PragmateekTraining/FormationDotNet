@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4197B316-82D5-47CF-8F6F-E013BE4030C7}</ProjectGuid>
+    <ProjectGuid>{13DCA664-A1DA-4D60-8171-63AE381579D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProtobufSamples</RootNamespace>
-    <AssemblyName>ProtobufSamples</AssemblyName>
+    <RootNamespace>LoggingServer</RootNamespace>
+    <AssemblyName>LoggingServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -64,24 +64,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogServerSample.cs" />
+    <Compile Include="LoggingServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="build.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoggingData\LoggingData.csproj">
       <Project>{b6dce7c3-4d64-4697-aae4-2783a905c62e}</Project>
       <Name>LoggingData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LoggingService\LoggingService.csproj">
-      <Project>{735cbedf-449e-4cce-a82d-855976bd928c}</Project>
-      <Name>LoggingService</Name>
     </ProjectReference>
     <ProjectReference Include="..\SamplesAPI\SamplesAPI.csproj">
       <Project>{39f2b3d1-179e-439d-96c6-6b9c74c47bd3}</Project>

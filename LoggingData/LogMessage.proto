@@ -1,4 +1,6 @@
-package LoggingServices;
+package logging;
+
+option java_outer_classname="Messages";
 
 enum Level
 {

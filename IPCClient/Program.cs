@@ -15,10 +15,21 @@ namespace IPCClient
 
             ILogger logger = ChannelFactory<ILogger>.CreateChannel(new NetNamedPipeBinding(), new EndpointAddress(address));
 
-            string message = null;
-            while ((message = Console.ReadLine()) != "")
+            try
             {
-                logger.Log(message);
+                string message = null;
+                while ((message = Console.ReadLine()) != "")
+                {
+                    logger.Log(message);
+                }
+            }
+            finally
+            {
+                IDisposable disposable = logger as IDisposable;
+                if (disposable != null)
+                {
+                    disposable.Dispose();
+                }
             }
         }
     }

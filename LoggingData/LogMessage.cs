@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: LogMessage.proto
-namespace LoggingServices
+namespace Logging
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"LogMessage")]
   public partial class LogMessage : global::ProtoBuf.IExtensible
@@ -22,9 +22,9 @@ namespace LoggingServices
       get { return _timestamp; }
       set { _timestamp = value; }
     }
-    private LoggingServices.Level _level;
+    private Logging.Level _level;
     [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"level", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public LoggingServices.Level Level
+    public Logging.Level Level
     {
       get { return _level; }
       set { _level = value; }
