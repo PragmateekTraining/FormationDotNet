@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            new CodeBaseSample().Run();
+            // new CodeBaseSample().Run();
+            new PrivatePathSample().Run();
         }
     }
 }

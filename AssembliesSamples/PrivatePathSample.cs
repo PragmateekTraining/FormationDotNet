@@ -3,7 +3,7 @@ using System.IO;
 
 namespace AssembliesSamples
 {
-    public class CodeBaseSample : ISample
+    public class PrivatePathSample : ISample
     {
         public void Run()
         {
@@ -18,7 +18,7 @@ namespace AssembliesSamples
 
             Tools.RunAndWait("Application.exe");
 
-            File.Copy(configFile + ".codebase.in", configFile);
+            File.Copy(configFile + ".private.in", configFile);
 
             Tools.RunAndWait("Application.exe");
         }
