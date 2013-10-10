@@ -29,9 +29,12 @@ namespace PoolingSamples
                     sheet.Cells[1, 1].Value = DateTime.UtcNow.ToString("o");
 
                     workbook.Close(SaveChanges: true);
+                    // workbook = null;
                 }
-                finally
+                catch (Exception e)
                 {
+                    Console.Error.WriteLine("Got exception:\n{0}", e);
+
                     if (workbook != null)
                     {
                         workbook.Close(SaveChanges: false);

@@ -39,6 +39,7 @@ namespace PoolingSamples
             else
             {
                 Application.Quit();
+                // Application = null;
             }
         }
     }
@@ -46,6 +47,7 @@ namespace PoolingSamples
     public class ApplicationPool : IDisposable
     {
         ConcurrentBag<Application> applications = new ConcurrentBag<Application>();
+        ConcurrentBag<Application> pool = new ConcurrentBag<Application>();
 
         const int maxApplicationsCount = 3;
 
@@ -57,7 +59,7 @@ namespace PoolingSamples
         {
             Application application;
 
-            if (!applications.TryTake(out application))
+            if (!pool.TryTake(out application))
             {
                 lock (countLock)
                 {
@@ -68,6 +70,8 @@ namespace PoolingSamples
                 }
 
                 application = new Application();
+
+                applications.Add(application);
             }
 
             return new ManagedApplication(application, this);
@@ -75,7 +79,29 @@ namespace PoolingSamples
 
         public void ReleaseApplication(IManagedApplication managedApplication)
         {
-            applications.Add(managedApplication.Application);
+            pool.Add(managedApplication.Application);
+        }
+
+        bool disposed = false;
+
+        public void Dispose()
+        {
+            if (!disposed)
+            {
+                foreach (Application application in applications)
+                {
+                    application.Quit();
+                }
+
+                disposed = true;
+
+                GC.SuppressFinalize(this);
+            }
+        }
+
+        ~ApplicationPool()
+        {
+            Dispose();
         }
     }
 }
