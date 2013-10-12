@@ -12,7 +12,8 @@ namespace LazySamples
         {
             // new DeadLockSample().Run();
             // new DefaultInstantiationSample().Run();
-            new NotThreadSafeSample().Run();
+            // new NotThreadSafeSample().Run();
+            new ThreadSafetyCostSample().Run();
         }
     }
 }
