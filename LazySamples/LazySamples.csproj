@@ -69,6 +69,7 @@
     <Compile Include="PublicationOnlySample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandardImplementationSample.cs" />
     <Compile Include="ThreadSafetyCostSample.cs" />
   </ItemGroup>
   <ItemGroup>
