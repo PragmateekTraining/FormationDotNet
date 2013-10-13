@@ -12,6 +12,11 @@ namespace LazySamples
             {
                 return lazyObject.Value;
             }
+
+            set
+            {
+                lazyObject = new Lazy<object>(() => value);
+            }
         }
     }
 }

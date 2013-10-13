@@ -7,7 +7,9 @@ namespace SamplesAPI
         private ConsoleColor originalForeground;
 
         public static Color Red { get { return new Color(ConsoleColor.Red); } }
+        public static Color Yellow { get { return new Color(ConsoleColor.Yellow); } }
         public static Color Green { get { return new Color(ConsoleColor.Green); } }
+        public static Color Gray { get { return new Color(ConsoleColor.Gray); } }
         public static Color Blue { get { return new Color(ConsoleColor.Blue); } }
 
         public Color(ConsoleColor foreground)
