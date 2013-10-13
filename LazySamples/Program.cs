@@ -14,7 +14,8 @@ namespace LazySamples
             // new DefaultInstantiationSample().Run();
             // new NotThreadSafeSample().Run();
             // new ThreadSafetyCostSample().Run();
-            new LazyInitializerSample().Run();
+            // new LazyInitializerSample().Run();
+            new PublicationOnlySample().Run();
         }
     }
 }

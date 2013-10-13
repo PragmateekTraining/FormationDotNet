@@ -66,6 +66,7 @@
     <Compile Include="DefaultInstantiationSample.cs" />
     <Compile Include="LazyInitializerSample.cs" />
     <Compile Include="NotThreadSafeSample.cs" />
+    <Compile Include="PublicationOnlySample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThreadSafetyCostSample.cs" />
