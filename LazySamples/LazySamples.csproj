@@ -64,6 +64,7 @@
     <Compile Include="ByHandSample.cs" />
     <Compile Include="DeadLockSample.cs" />
     <Compile Include="DefaultInstantiationSample.cs" />
+    <Compile Include="LazyInitializerSample.cs" />
     <Compile Include="NotThreadSafeSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
