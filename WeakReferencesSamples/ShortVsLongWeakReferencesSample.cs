@@ -22,25 +22,25 @@ namespace WeakReferencesSamples
 
             target = null;
 
-            Console.WriteLine("{0} / {1}", shortWeakReference.Target, longWeakReference.Target);
+            Console.WriteLine("{0} / {1}", shortWeakReference.Target ?? "null", longWeakReference.Target ?? "null");
 
             Console.WriteLine("===First collection===");
 
-            GC.Collect();            
+            GC.Collect();
 
-            Console.WriteLine("{0} / {1}", shortWeakReference.Target, longWeakReference.Target);
+            Console.WriteLine("{0} / {1}", shortWeakReference.Target ?? "null", longWeakReference.Target ?? "null");
 
             Console.WriteLine("===Finalization===");
 
             GC.WaitForPendingFinalizers();
 
-            Console.WriteLine("{0} / {1}", shortWeakReference.Target, longWeakReference.Target);
+            Console.WriteLine("{0} / {1}", shortWeakReference.Target ?? "null", longWeakReference.Target ?? "null");
 
             Console.WriteLine("===Second collection===");
 
             GC.Collect();
 
-            Console.WriteLine("{0} / {1}", shortWeakReference.Target, longWeakReference.Target);
+            Console.WriteLine("{0} / {1}", shortWeakReference.Target ?? "null", longWeakReference.Target ?? "null");
         }
     }
 }
