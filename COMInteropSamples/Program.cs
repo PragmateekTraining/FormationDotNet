@@ -10,6 +10,7 @@ namespace COMInteropSamples
             // Console.WriteLine(Environment.UserName);
             // new NativeCOMSample("azertyuyiiop!").Run();
             new CSComponentSample().Run();
+            // new TlbImpSample().Run();
         }
     }
 }

@@ -101,7 +101,7 @@ namespace GCSamples
                 {
                     long memory = GC.GetTotalMemory(false) / 1000000;
 
-                    Log(Level.ERROR, "Manual GC. {0}", memory);
+                    Log(Level.ERROR, "Manual GC. ({0}M)", memory);
 
                     list.Clear();
                     GC.Collect();

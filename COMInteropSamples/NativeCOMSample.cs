@@ -5,22 +5,22 @@ using System.Runtime.InteropServices;
 
 namespace COMInteropSamples
 {
-    [ComImport]
-    [Guid("F0CE8DD2-AE05-435B-AEB5-038EA4A1191B")]
-    [InterfaceTypeAttribute(ComInterfaceType.InterfaceIsIUnknown)]
-    public interface IComLogger
-    {
-        void Log(string message);
-    }
-
-    [ComImport]
-    [Guid("8A49257F-D5E9-47DB-B87D-E09EBAF199AE")]
-    public class ComLogger
-    {
-    }
-
     public class NativeCOMSample : ISample
     {
+        [ComImport]
+        [Guid("F0CE8DD2-AE05-435B-AEB5-038EA4A1191B")]
+        [InterfaceTypeAttribute(ComInterfaceType.InterfaceIsIUnknown)]
+        interface IComLogger
+        {
+            void Log(string message);
+        }
+
+        [ComImport]
+        [Guid("8A49257F-D5E9-47DB-B87D-E09EBAF199AE")]
+        class ComLogger
+        {
+        }
+
         private string message = null;
 
         public NativeCOMSample(string message)

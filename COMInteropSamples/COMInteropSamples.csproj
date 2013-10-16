@@ -71,6 +71,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ManagedCOMLogger">
+      <HintPath>NativeComponent\ManagedCOMLogger.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,21 +84,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSComponentSample.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="ManagedCOMComponent\CSComponentSample.cs" />
+    <Compile Include="ManagedCOMComponent\Logger.cs" />
     <Compile Include="NativeCOMSample.cs" />
     <Compile Include="ExcelAutomationSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TlbImpSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="build.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="build_old.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ManagedCOMComponent\build.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="NativeComponent\build.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="NativeComponent\ComLogger.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="NativeComponent\ComLogger.reg.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="NativeComponent\ComLogger.tlb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="README.md" />
     <None Include="Test.vba">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -164,9 +185,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Test.vbs">
+    <None Include="ManagedCOMComponent\Test.vbs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ManagedCOMComponent\Test.cpp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="NativeComponent\ComLogger.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -10,7 +10,9 @@ namespace COMInteropSamples
     {
         public void Run()
         {
-            Tools.RunAndWait("cscript", "Test.vbs");
+            Tools.RunAndWait("ManagedCOMComponent/build.bat");
+            Tools.RunAndWait("ManagedCOMComponent/Test.exe");
+            Tools.RunAndWait("cscript", "ManagedCOMComponent/Test.vbs");
         }
     }
 }
