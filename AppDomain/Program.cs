@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AppDomainSamples
+﻿namespace AppDomainSamples
 {
     class Program
     {
@@ -17,6 +12,16 @@ namespace AppDomainSamples
                     bool restrict = args.Length == 2 && args[1] == "restrict";
 
                     new ReflectionSample(restrict).Run();
+                }
+                else if (args[0] == "isolation")
+                {
+                    bool sandbox = args.Length == 2 && args[1] == "sandbox";
+
+                    new IsolationSample(sandbox).Run();
+                }
+                else if (args[0] == "unhandled")
+                {
+                    new UnhandledExceptionSample().Run();
                 }
                 // new SecuritySample(args.Length == 1 && args[0] == "restrict").Run();
             }

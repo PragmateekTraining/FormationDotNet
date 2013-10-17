@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnhandledExceptionsSample.cs" />
+    <Compile Include="IsolationSample.cs" />
     <Compile Include="ExceptionsSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -3,7 +3,7 @@ using SamplesAPI;
 
 namespace ExceptionsSamples
 {
-    public class AppDomainUnhandledException : ISample
+    public class AppDomainUnhandledExceptionSample : ISample
     {
         public void Run()
         {

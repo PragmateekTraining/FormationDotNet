@@ -3,23 +3,23 @@ using SamplesAPI;
 
 namespace AppDomainSamples
 {
-    //[Serializable]
-    public class Buggy : MarshalByRefObject
-    {
-        public void OK()
-        {
-            Console.WriteLine("Buggy is OK :)");
-        }
-
-        public void KO()
-        {
-            Console.WriteLine("Buggy is KO X(");
-            throw new Exception("Buggy is KO X(");
-        }
-    }
-
     public class AddinsSample : ISample
     {
+        //[Serializable]
+        public class Buggy : MarshalByRefObject
+        {
+            public void OK()
+            {
+                Console.WriteLine("Buggy is OK :)");
+            }
+
+            public void KO()
+            {
+                Console.WriteLine("Buggy is KO X(");
+                throw new Exception("Buggy is KO X(");
+            }
+        }
+
         bool createNewAppDomain = false;
 
         public AddinsSample(bool createNewAppDomain)
@@ -37,7 +37,7 @@ namespace AppDomainSamples
                 appDomain = AppDomain.CreateDomain("Addins' domain");
             }
 
-            Buggy buggy = appDomain.CreateInstanceAndUnwrap("AppDomain", "AppDomainSamples.Buggy") as Buggy;
+            Buggy buggy = appDomain.CreateInstanceAndUnwrap("AppDomainSamples", "AppDomainSamples.AddinsSample+Buggy") as Buggy;
             buggy.OK();
             buggy.KO();
 
