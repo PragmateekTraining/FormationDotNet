@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FailFastSample.cs" />
     <Compile Include="JobObject.cs" />
     <Compile Include="JobObjectSample.cs" />
     <Compile Include="Program.cs" />
