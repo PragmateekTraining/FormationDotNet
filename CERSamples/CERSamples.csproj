@@ -52,6 +52,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccessViolation">
+      <HintPath>AccessViolation\AccessViolation.exe</HintPath>
+    </Reference>
+    <Reference Include="InvalidProgram">
+      <HintPath>InvalidProgram\InvalidProgram.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessViolationSample.cs" />
+    <Compile Include="InvalidProgramSample.cs" />
+    <Compile Include="GuaranteedCleanupSample.cs" />
+    <Compile Include="StackOverflowSample.cs" />
+    <Compile Include="OutOfMemorySample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TerminateThreadSample.cs" />
@@ -77,6 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="native.c" />
+    <None Include="AccessViolation\build.bat" />
+    <None Include="AccessViolation\AccessViolation.il" />
+    <None Include="InvalidProgram\build.bat" />
+    <None Include="InvalidProgram\InvalidProgram.il" />
     <None Include="native.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
