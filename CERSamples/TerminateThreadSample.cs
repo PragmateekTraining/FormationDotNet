@@ -1,12 +1,8 @@
 ﻿using SamplesAPI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace CERSamples
 {
@@ -21,7 +17,7 @@ namespace CERSamples
         [DllImport("native.dll")]
         static extern void spin();
 
-        CountdownEvent countDown = new CountdownEvent(2);
+        // CountdownEvent countDown = new CountdownEvent(2);
 
         uint withoutCERThreadID;
         uint withCERThreadID;

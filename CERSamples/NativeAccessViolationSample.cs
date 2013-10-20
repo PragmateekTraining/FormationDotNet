@@ -1,30 +1,28 @@
 ﻿using SamplesAPI;
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace CERSamples
 {
-    public class GuaranteedCleanupSample : ISample
+    public class NativeAccessViolationSample : ISample
     {
+        [DllImport("native.dll")]
+        extern static void segfault();
+
         bool withoutCERHasRunFinally;
         bool withCERHasRunFinally;
-
-        // [PrePrepareMethod]
-        void BlackHole()
-        {
-            BlackHole();
-        }
 
         void WithoutCER()
         {
             try
             {
-                BlackHole();
+                segfault();
             }
             finally
             {
                 withoutCERHasRunFinally = true;
-                Console.WriteLine("IN!");
+                Console.WriteLine("In");
             }
         }
 
@@ -33,44 +31,46 @@ namespace CERSamples
             RuntimeHelpers.PrepareConstrainedRegions();
             try
             {
-                BlackHole();
+                segfault();
             }
             finally
             {
                 withCERHasRunFinally = true;
-                Console.WriteLine("IN!");
+                Console.WriteLine("In");
             }
         }
 
-        bool useCER;
+        bool withCER;
 
-        public GuaranteedCleanupSample(bool useCER)
+        public NativeAccessViolationSample(bool withCER)
         {
-            this.useCER = useCER;
+            this.withCER = withCER;
         }
 
         public void Run()
         {
-            if (!useCER)
+            if (!withCER)
             {
                 try
                 {
                     WithoutCER();
                 }
-                catch (StackOverflowException)
+                catch (AccessViolationException e)
                 {
+                    Console.WriteLine("Got it");
+                    Console.WriteLine(e);
                 }
             }
             else
             {
-                Console.WriteLine("Using CER");
-
                 try
                 {
                     WithCER();
                 }
-                catch (StackOverflowException)
+                catch (AccessViolationException e)
                 {
+                    Console.WriteLine("Got it");
+                    Console.WriteLine(e);
                 }
             }
 
