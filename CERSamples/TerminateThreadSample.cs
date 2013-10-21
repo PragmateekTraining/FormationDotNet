@@ -17,8 +17,6 @@ namespace CERSamples
         [DllImport("native.dll")]
         static extern void spin();
 
-        // CountdownEvent countDown = new CountdownEvent(2);
-
         uint withoutCERThreadID;
         uint withCERThreadID;
 
@@ -31,18 +29,10 @@ namespace CERSamples
             
             try
             {
-                // while (true) ;
                 for (int i = 0; i >= 0; ++i) ;
-                // Console.WriteLine("WithoutCERThread try");
-                // countDown.Signal();
-
-                //spin();
-                // Thread.Sleep(1000);
-                // Console.WriteLine("WithoutCERThread after sleep");
             }
             finally
             {
-                // Console.WriteLine("WithoutCERThread finally");
                 withoutCERThreadHasRunFinally = true;
             }
         }
@@ -54,17 +44,10 @@ namespace CERSamples
             RuntimeHelpers.PrepareConstrainedRegions();
             try
             {
-                // while (true) ;
                 for (int i = 0; i >= 0; ++i) ;
-                // Console.WriteLine("WithCERThread try");
-                // countDown.Signal();
-                // Thread.Sleep(1000);
-                //spin();
-                // Console.WriteLine("WithCERThread try");
             }
             finally
             {
-                // Console.WriteLine("WithCERThread finally");
                 withCERThreadHasRunFinally = true;
             }
         }
@@ -77,20 +60,16 @@ namespace CERSamples
             withoutCERThread.Start();
             withCERThread.Start();
 
-            Console.WriteLine("Before wait");
-            // countDown.Wait();
-            Console.WriteLine("After wait");
-
             Thread.Sleep(1000);
 
             Console.WriteLine(withoutCERThreadID);
             Console.WriteLine(withCERThreadID);
 
-            // withoutCERThread.Abort();
-            // withCERThread.Abort();
+            withoutCERThread.Abort();
+            withCERThread.Abort();
 
-            TerminateThread(withoutCERThreadID, 1);
-            TerminateThread(withCERThreadID, 1);
+            /* TerminateThread(withoutCERThreadID, 1);
+            TerminateThread(withCERThreadID, 1);*/
 
             Console.WriteLine(withoutCERThreadHasRunFinally);
             Console.WriteLine(withCERThreadHasRunFinally);

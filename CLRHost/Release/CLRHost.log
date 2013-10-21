@@ -1,0 +1,15 @@
+﻿Build started 21/10/2013 16:27:53.
+     1>Project "C:\Users\mick\Documents\GitHub\FormationDotNet\CLRHost\CLRHost.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Host.cpp
+         Host.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\CLRHost.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\CLRHost.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\CLRHost.lib" /MACHINE:X86 /SAFESEH Release\Host.obj
+         Generating code
+         Finished generating code
+         CLRHost.vcxproj -> C:\Users\mick\Documents\GitHub\FormationDotNet\Release\CLRHost.exe
+     1>Done Building Project "C:\Users\mick\Documents\GitHub\FormationDotNet\CLRHost\CLRHost.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.48

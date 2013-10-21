@@ -87,7 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessViolationSample.cs" />
+    <Compile Include="CERWithHostingSample.cs" />
     <Compile Include="ContinuousExecutionSample.cs" />
+    <Compile Include="DelayedThreadAbortSample.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="NativeAccessViolationSample.cs" />
     <Compile Include="InvalidProgramSample.cs" />
     <Compile Include="GuaranteedCleanupSample.cs" />
@@ -96,6 +99,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TerminateThreadSample.cs" />
+    <Compile Include="ThreadAbortTimeoutSample.cs" />
     <Compile Include="ThreadRudeAbortSample.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,9 +113,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\CLRHost\bin\Release\CLRHost.exe">
+      <Link>CLRHost.exe</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="native.c" />
     <None Include="AccessViolation\build.bat" />
     <None Include="AccessViolation\AccessViolation.il" />
+    <None Include="CERSamples.exe.mda.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="InvalidProgram\build.bat" />
     <None Include="InvalidProgram\InvalidProgram.il" />
     <None Include="native.dll">
