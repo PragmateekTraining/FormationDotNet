@@ -1,5 +1,18 @@
-﻿Build started 17/10/2013 01:29:32.
+﻿Build started 22/10/2013 11:51:26.
+     1>Project "C:\Users\mick\Documents\GitHub\FormationDotNet\NativeLibrary\NativeLibrary.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt NativeLibrary.cpp
+         NativeLibrary.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\NativeLibrary.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.lib" /MACHINE:X86 /DLL Release\NativeLibrary.obj
+            Creating library C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.lib and object C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.exp
+         Generating code
+         Finished generating code
+         NativeLibrary.vcxproj -> C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\mick\Documents\GitHub\FormationDotNet\Release\NativeLibrary.dll;#2" /manifest Release\NativeLibrary.dll.intermediate.manifest
+     1>Done Building Project "C:\Users\mick\Documents\GitHub\FormationDotNet\NativeLibrary\NativeLibrary.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.15
+Time Elapsed 00:00:00.64

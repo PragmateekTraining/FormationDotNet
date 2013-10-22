@@ -22,4 +22,16 @@ extern "C"
 	{
 		printf("{ [%d, %d], %d }\n", myShort.FirstByte, myShort.SecondByte, myShort.Value);
 	}
+
+	static int* data;
+
+	__declspec(dllexport) void set_data(int* p)
+	{
+		data = p;
+	}
+
+	__declspec(dllexport) int get_data()
+	{
+		return *data;
+	}
 }

@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDomainUnhandledExceptionSample.cs" />
+    <Compile Include="ExceptionDataSample.cs" />
     <Compile Include="WpfDispatcherUnhandledExceptionSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

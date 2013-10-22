@@ -11,7 +11,8 @@ namespace GCSamples
     {
         static void Main(string[] args)
         {
-            new GCNotificationSample((GCLatencyMode)Enum.Parse(typeof(GCLatencyMode), args[0])).Run();
+            // new GCNotificationSample((GCLatencyMode)Enum.Parse(typeof(GCLatencyMode), args[0])).Run();
+            new GCGenerationsSample().Run();
         }
     }
 }
