@@ -10,7 +10,7 @@ namespace ExcelSamples
     {
         static void Main(string[] args)
         {
-            new EEPlusSample().Run();
+            new BenchmarkSample().Run();
         }
     }
 }

@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="GCGenerationsSample.cs" />
     <Compile Include="GCNotificationSample.cs" />
+    <Compile Include="MemoryFailPointSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
