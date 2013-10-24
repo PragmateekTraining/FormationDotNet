@@ -17,7 +17,8 @@ namespace Threading
             // new Scalability().Run();
             // new BackgroundVsForeground().Run(true);
             // new Downloader().Run();
-            new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
+            // new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
+            new ReentrancySample().Run();
         }
     }
 }

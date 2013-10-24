@@ -67,6 +67,7 @@
     <Compile Include="BackgroundVsForeground.cs" />
     <Compile Include="BarrierSample.cs" />
     <Compile Include="Downloader.cs" />
+    <Compile Include="ReentrancySample.cs" />
     <Compile Include="Scalability.cs" />
     <Compile Include="SemaphoreOwnership.cs" />
     <Compile Include="LifeCycle.cs" />
@@ -77,6 +78,12 @@
     <Compile Include="Stop.cs" />
     <Compile Include="UI.cs" />
     <Compile Include="WaitPulse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SamplesAPI\SamplesAPI.csproj">
+      <Project>{39f2b3d1-179e-439d-96c6-6b9c74c47bd3}</Project>
+      <Name>SamplesAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
