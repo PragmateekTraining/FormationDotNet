@@ -1,10 +1,6 @@
 ﻿using SamplesAPI;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PerformanceCountersSamples
 {
@@ -22,8 +18,6 @@ namespace PerformanceCountersSamples
 
                 PerformanceCounterCategory.Create(categoryName, "Some fake counters for testing.", PerformanceCounterCategoryType.SingleInstance, counters);
             }
-
-            // PerformanceCounterCategory category = new PerformanceCounterCategory(categoryName);
 
             PerformanceCounter counter = new PerformanceCounter(categoryName, counterName, readOnly: false);
 

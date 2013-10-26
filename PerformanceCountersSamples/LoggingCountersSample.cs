@@ -3,9 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using timers = System.Timers;
 
 namespace PerformanceCountersSamples
@@ -103,18 +101,18 @@ namespace PerformanceCountersSamples
 
         public void Run()
         {
-            if (delete)
+            if (delete && PerformanceCounterCategory.Exists(categoryName))
             {
-                if (PerformanceCounterCategory.Exists(categoryName))
-                {
-                    PerformanceCounterCategory.Delete(categoryName);
-                }
+                Console.WriteLine("Deleting category '{0}'...", categoryName);
+                PerformanceCounterCategory.Delete(categoryName);
+                Console.WriteLine("Category '{0}' deleted.", categoryName);
             }
 
             Logger logger = new Logger();
 
             Random rand = new Random();
 
+            Console.WriteLine("Starting to log...");
             while (true)
             {
                 logger.Log(string.Empty, rand.Next() % 5 == 0 ? Level.ERROR : Level.INFO);

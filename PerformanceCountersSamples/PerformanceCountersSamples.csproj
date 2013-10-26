@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLRMonitoringSample.cs" />
     <Compile Include="LoggingCountersSample.cs" />
+    <Compile Include="MultiInstanceCounterSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleCounterSample.cs" />
