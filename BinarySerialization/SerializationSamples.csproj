@@ -79,8 +79,10 @@
     </Content>
     <Compile Include="BinarySerializationSample.cs" />
     <Compile Include="Base64EncodingSample.cs" />
+    <Compile Include="ComplexSerializationSample.cs" />
     <Compile Include="DeepCloneSample.cs" />
     <Compile Include="EventsSerializationSample.cs" />
+    <Compile Include="ISerializablePerformanceSample.cs" />
     <Compile Include="OHLC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

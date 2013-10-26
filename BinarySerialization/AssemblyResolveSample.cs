@@ -9,13 +9,13 @@ namespace SerializationSamples
     {
         public void Serialize()
         {
-            A.A a = new A.A("42");
+            global::A.A a = new global::A.A("42");
             File.WriteAllBytes("a.dat", a.ToNetBinary());
         }
 
         public void Deserialize()
         {
-            Console.WriteLine("Deserializing: " + File.ReadAllBytes("a.dat").FromNetBinary<A.A>());
+            Console.WriteLine("Deserializing: " + File.ReadAllBytes("a.dat").FromNetBinary<global::A.A>());
         }
     }
 
