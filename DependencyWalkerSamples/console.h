@@ -1,0 +1,1 @@
+﻿__declspec(dllexport) void print(const char* s);

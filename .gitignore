@@ -3,3 +3,7 @@ obj/
 NativeLibrary/Debug/
 *.opensdf
 Tools/
+DependencyWalkerSamples/*.dll
+DependencyWalkerSamples/*.obj
+DependencyWalkerSamples/*.exp
+DependencyWalkerSamples/*.lib
