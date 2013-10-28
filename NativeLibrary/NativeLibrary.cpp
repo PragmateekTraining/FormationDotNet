@@ -34,4 +34,16 @@ extern "C"
 	{
 		return *data;
 	}
+
+	__declspec(dllexport) unsigned int sum(size_t size, const unsigned int* data)
+	{
+		unsigned int sum = 0;
+
+		for (size_t i = 0; i < size; ++i)
+		{
+			sum += data[i];
+		}
+
+		return sum;
+	}
 }

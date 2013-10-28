@@ -7,7 +7,8 @@
             // new Tests().CanDisplaySomeText();
             // new MemoryAlignmentSample().Run();
             // new UnionSample().Run();
-            new MemoryPinningSample().Run();
+            // new MemoryPinningSample().Run();
+            new ArraysSample().Run();
         }
     }
 }

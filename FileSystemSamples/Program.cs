@@ -10,7 +10,8 @@ namespace FileSystemSamples
     {
         static void Main(string[] args)
         {
-            new FileSystemWatcherSample().Run();
+            // new FileSystemWatcherSample().Run();
+            new FileCreateHandleSample().Run();
         }
     }
 }

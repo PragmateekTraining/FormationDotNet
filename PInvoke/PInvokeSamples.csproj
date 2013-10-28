@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraysSample.cs" />
     <Compile Include="MemoryPinningSample.cs" />
     <Compile Include="UnionSample.cs" />
     <Compile Include="Program.cs" />
