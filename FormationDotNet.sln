@@ -141,6 +141,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnmanagedExports", "Unmanag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReversePInvokeSamples", "ReversePInvokeSamples\ReversePInvokeSamples.csproj", "{4E1C8122-3045-4959-A76D-E9500FD491F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblySigningSamples", "AssemblySigningSamples\AssemblySigningSamples.csproj", "{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1229,7 +1231,23 @@ Global
 		{4E1C8122-3045-4959-A76D-E9500FD491F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4E1C8122-3045-4959-A76D-E9500FD491F2}.Release|Win32.ActiveCfg = Release|Any CPU
 		{4E1C8122-3045-4959-A76D-E9500FD491F2}.Release|x64.ActiveCfg = Release|Any CPU
-		{4E1C8122-3045-4959-A76D-E9500FD491F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E1C8122-3045-4959-A76D-E9500FD491F2}.Release|x86.ActiveCfg = Release|x86
+		{4E1C8122-3045-4959-A76D-E9500FD491F2}.Release|x86.Build.0 = Release|x86
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|Win32.ActiveCfg = Release|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|x64.ActiveCfg = Release|Any CPU
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|x86.ActiveCfg = Release|x86
+		{467BAAA1-6971-4EBD-938A-B4C6B8900DDC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
