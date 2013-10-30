@@ -1,0 +1,133 @@
+﻿using SamplesAPI;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Threading
+{
+    public class ReaderWriterLockSample : ISample
+    {
+        int n;
+        double p;
+        int threadCount;
+
+        Barrier barrier;
+        object @lock = new object();
+        ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
+
+        void SimpleLocking()
+        {
+            Console.WriteLine("Thread waiting to start...");
+
+            barrier.SignalAndWait();
+
+            Console.WriteLine("Thread starting to loop...");
+
+            for (int i = 1; i <= n; ++i)
+            {
+                lock (@lock)
+                {
+                    Thread.Sleep(1);
+                }
+            }
+        }
+
+        void RWLocking()
+        {
+            Console.WriteLine("Thread waiting to start...");
+
+            barrier.SignalAndWait();
+
+            Console.WriteLine("Thread starting to loop...");
+
+            Random rand = new Random();
+
+            for (int i = 1; i <= n; ++i)
+            {
+                if (p != 0 && rand.Next((int)(1 / p)) == 0)
+                {
+                    try
+                    {
+                        rwLock.EnterWriteLock();
+                        Thread.Sleep(1);
+                    }
+                    finally
+                    {
+                        rwLock.ExitWriteLock();
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        rwLock.EnterReadLock();
+                        Thread.Sleep(1);
+                    }
+                    finally
+                    {
+                        rwLock.ExitReadLock();
+                    }
+                }
+            }
+        }
+
+        public ReaderWriterLockSample(int n, double p, int threadCount)
+        {
+            this.n = n;
+            this.p = p;
+            this.threadCount = threadCount;
+        }
+
+        public void Run()
+        {
+            IList<Thread> threads = new List<Thread>(threadCount);
+
+            barrier = new Barrier(threadCount + 1);
+
+            for (int i = 1; i <= threadCount; ++i)
+            {
+                Thread thread = new Thread(SimpleLocking) { IsBackground = true };
+                threads.Add(thread);
+                thread.Start();
+            }
+
+            barrier.SignalAndWait();
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            for (int i = 0; i < threadCount; ++i)
+            {
+                threads[i].Join();
+            }
+            stopwatch.Stop();
+
+            TimeSpan simpleLockingTime = stopwatch.Elapsed;
+
+            threads.Clear();
+            barrier = new Barrier(threadCount + 1);
+
+            for (int i = 1; i <= threadCount; ++i)
+            {
+                Thread thread = new Thread(RWLocking) { IsBackground = true };
+                threads.Add(thread);
+                thread.Start();
+            }
+
+            barrier.SignalAndWait();
+            stopwatch.Restart();
+            for (int i = 0; i < threadCount; ++i)
+            {
+                threads[i].Join();
+            }
+            stopwatch.Stop();
+
+            TimeSpan rwLockingTime = stopwatch.Elapsed;
+
+            Console.WriteLine("With simple locking: {0}", simpleLockingTime);
+            Console.WriteLine("With RW locking: {0}", rwLockingTime);
+        }
+    }
+}

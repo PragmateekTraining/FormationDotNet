@@ -67,6 +67,7 @@
     <Compile Include="BackgroundVsForeground.cs" />
     <Compile Include="BarrierSample.cs" />
     <Compile Include="Downloader.cs" />
+    <Compile Include="ReaderWriterLockSample.cs" />
     <Compile Include="ReentrancySample.cs" />
     <Compile Include="Scalability.cs" />
     <Compile Include="SemaphoreOwnership.cs" />
