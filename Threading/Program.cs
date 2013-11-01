@@ -19,7 +19,7 @@ namespace Threading
             // new Downloader().Run();
             // new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
             // new ReentrancySample().Run();
-            new ReaderWriterLockSample(1000, 0, 4).Run();
+            new ReaderWriterLockSample(1000, 0m, 1m, 0.05m, 4).Run();
         }
     }
 }

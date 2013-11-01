@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Threading
@@ -11,7 +9,8 @@ namespace Threading
     public class ReaderWriterLockSample : ISample
     {
         int n;
-        double p;
+        decimal p;
+        decimal pStart, pEnd, pStep;
         int threadCount;
 
         Barrier barrier;
@@ -20,11 +19,11 @@ namespace Threading
 
         void SimpleLocking()
         {
-            Console.WriteLine("Thread waiting to start...");
+            // Console.WriteLine("Thread waiting to start...");
 
             barrier.SignalAndWait();
 
-            Console.WriteLine("Thread starting to loop...");
+           // Console.WriteLine("Thread starting to loop...");
 
             for (int i = 1; i <= n; ++i)
             {
@@ -37,17 +36,17 @@ namespace Threading
 
         void RWLocking()
         {
-            Console.WriteLine("Thread waiting to start...");
+            // Console.WriteLine("Thread waiting to start...");
 
             barrier.SignalAndWait();
 
-            Console.WriteLine("Thread starting to loop...");
+            // Console.WriteLine("Thread starting to loop...");
 
             Random rand = new Random();
 
             for (int i = 1; i <= n; ++i)
             {
-                if (p != 0 && rand.Next((int)(1 / p)) == 0)
+                if (1.0m * rand.Next() / int.MaxValue <= p)
                 {
                     try
                     {
@@ -74,10 +73,12 @@ namespace Threading
             }
         }
 
-        public ReaderWriterLockSample(int n, double p, int threadCount)
+        public ReaderWriterLockSample(int n, decimal pStart, decimal pEnd, decimal pStep, int threadCount)
         {
             this.n = n;
-            this.p = p;
+            this.pStart = pStart;
+            this.pEnd = pEnd;
+            this.pStep = pStep;
             this.threadCount = threadCount;
         }
 
@@ -106,28 +107,33 @@ namespace Threading
 
             TimeSpan simpleLockingTime = stopwatch.Elapsed;
 
-            threads.Clear();
-            barrier = new Barrier(threadCount + 1);
+            Console.WriteLine("Reference time: {0}", simpleLockingTime);
 
-            for (int i = 1; i <= threadCount; ++i)
+            for (p = pStart; p <= pEnd; p += pStep)
             {
-                Thread thread = new Thread(RWLocking) { IsBackground = true };
-                threads.Add(thread);
-                thread.Start();
+                threads.Clear();
+                barrier = new Barrier(threadCount + 1);
+
+                for (int i = 1; i <= threadCount; ++i)
+                {
+                    Thread thread = new Thread(RWLocking) { IsBackground = true };
+                    threads.Add(thread);
+                    thread.Start();
+                }
+
+                barrier.SignalAndWait();
+                stopwatch.Restart();
+                for (int i = 0; i < threadCount; ++i)
+                {
+                    threads[i].Join();
+                }
+                stopwatch.Stop();
+
+                TimeSpan rwLockingTime = stopwatch.Elapsed;
+
+                Console.WriteLine("{0}\t{1}", p, 1.0 * rwLockingTime.TotalMilliseconds / simpleLockingTime.TotalMilliseconds);
             }
-
-            barrier.SignalAndWait();
-            stopwatch.Restart();
-            for (int i = 0; i < threadCount; ++i)
-            {
-                threads[i].Join();
-            }
-            stopwatch.Stop();
-
-            TimeSpan rwLockingTime = stopwatch.Elapsed;
-
-            Console.WriteLine("With simple locking: {0}", simpleLockingTime);
-            Console.WriteLine("With RW locking: {0}", rwLockingTime);
+            // Console.WriteLine("With RW locking: {0}", rwLockingTime);
         }
     }
 }
