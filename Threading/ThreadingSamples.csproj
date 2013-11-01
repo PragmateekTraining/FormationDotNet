@@ -8,7 +8,7 @@
     <ProjectGuid>{86F0B8FD-6AB6-4597-84A5-A07C593B7EF2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Threading</RootNamespace>
+    <RootNamespace>ThreadingSamples</RootNamespace>
     <AssemblyName>Threading</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -67,6 +67,8 @@
     <Compile Include="BackgroundVsForeground.cs" />
     <Compile Include="BarrierSample.cs" />
     <Compile Include="Downloader.cs" />
+    <Compile Include="RaceAndDeadLockSample.cs" />
+    <Compile Include="RaceSample.cs" />
     <Compile Include="ReaderWriterLockSample.cs" />
     <Compile Include="ReentrancySample.cs" />
     <Compile Include="Scalability.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stop.cs" />
+    <Compile Include="ThreadLocalSample.cs" />
+    <Compile Include="ThreadStaticSample.cs" />
     <Compile Include="UI.cs" />
     <Compile Include="WaitPulse.cs" />
   </ItemGroup>

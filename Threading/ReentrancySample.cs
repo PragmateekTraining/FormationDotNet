@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Threading
+namespace ThreadingSamples
 {
     public class ReentrancySample : ISample
     {

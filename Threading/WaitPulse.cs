@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.IO;
 
-namespace Threading
+namespace ThreadingSamples
 {
     class WaitPulse
     {

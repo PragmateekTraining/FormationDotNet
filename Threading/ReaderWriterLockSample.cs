@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Threading
+namespace ThreadingSamples
 {
     public class ReaderWriterLockSample : ISample
     {
@@ -95,10 +95,10 @@ namespace Threading
                 thread.Start();
             }
 
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
             barrier.SignalAndWait();
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             for (int i = 0; i < threadCount; ++i)
             {
                 threads[i].Join();
@@ -121,8 +121,9 @@ namespace Threading
                     thread.Start();
                 }
 
-                barrier.SignalAndWait();
                 stopwatch.Restart();
+                barrier.SignalAndWait();
+                
                 for (int i = 0; i < threadCount; ++i)
                 {
                     threads[i].Join();

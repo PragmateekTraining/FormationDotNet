@@ -3,7 +3,7 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Threading
+namespace ThreadingSamples
 {
     class Program
     {
@@ -19,7 +19,10 @@ namespace Threading
             // new Downloader().Run();
             // new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
             // new ReentrancySample().Run();
-            new ReaderWriterLockSample(1000, 0m, 1m, 0.05m, 4).Run();
+            // new ReaderWriterLockSample(1000, 0m, 1m, 0.05m, 4).Run();
+            // new ThreadStaticSample().Run();
+            // new ThreadLocalSample().Run();
+            new RaceSample().Run();
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using NUnit.Framework;
 using System.Threading;
 
-namespace Threading
+namespace ThreadingSamples
 {
     [TestFixture]
     class Stop

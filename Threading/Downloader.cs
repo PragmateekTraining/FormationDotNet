@@ -5,7 +5,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
 
-namespace Threading
+namespace ThreadingSamples
 {
     class Downloader
     {

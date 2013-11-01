@@ -2,7 +2,7 @@
 using System.Threading;
 using NUnit.Framework;
 
-namespace Threading
+namespace ThreadingSamples
 {
     [TestFixture]
     class SemaphoreOwnership
