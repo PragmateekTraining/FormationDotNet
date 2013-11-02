@@ -67,7 +67,7 @@
     <Compile Include="BackgroundVsForeground.cs" />
     <Compile Include="BarrierSample.cs" />
     <Compile Include="Downloader.cs" />
-    <Compile Include="RaceAndDeadLockSample.cs" />
+    <Compile Include="DeadLockSample.cs" />
     <Compile Include="RaceSample.cs" />
     <Compile Include="ReaderWriterLockSample.cs" />
     <Compile Include="ReentrancySample.cs" />

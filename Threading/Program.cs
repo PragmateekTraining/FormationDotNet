@@ -22,7 +22,8 @@ namespace ThreadingSamples
             // new ReaderWriterLockSample(1000, 0m, 1m, 0.05m, 4).Run();
             // new ThreadStaticSample().Run();
             // new ThreadLocalSample().Run();
-            new RaceSample().Run();
+            // new RaceSample().Run();
+            new DeadLockSample().Run();
         }
     }
 }
