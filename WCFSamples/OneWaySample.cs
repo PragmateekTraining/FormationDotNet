@@ -1,12 +1,8 @@
 ﻿using SamplesAPI;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace WCFSamples
 {
@@ -37,11 +33,14 @@ namespace WCFSamples
 
         public void Run()
         {
+            const string url = "http://localhost:12345/log";
+            WSHttpBinding binding = new WSHttpBinding(SecurityMode.None);
+
             ServiceHost host = new ServiceHost(typeof(LogService));
-            host.AddServiceEndpoint(typeof(ILogService), new WSHttpBinding(/*SecurityMode.None*/), "http://localhost:12345/log");
+            host.AddServiceEndpoint(typeof(ILogService), binding, url);
             host.Open();
 
-            ILogService proxy = ChannelFactory<ILogService>.CreateChannel(new WSHttpBinding(/*SecurityMode.None*/), new EndpointAddress("http://localhost:12345/log"));
+            ILogService proxy = ChannelFactory<ILogService>.CreateChannel(binding, new EndpointAddress(url));
             proxy.Log("");
 
             const int n = 100;

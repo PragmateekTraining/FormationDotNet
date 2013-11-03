@@ -23,7 +23,8 @@ namespace ThreadingSamples
             // new ThreadStaticSample().Run();
             // new ThreadLocalSample().Run();
             // new RaceSample().Run();
-            new DeadLockSample().Run();
+            // new DeadLockSample().Run();
+            new MonitorRaceSample().Run();
         }
     }
 }
