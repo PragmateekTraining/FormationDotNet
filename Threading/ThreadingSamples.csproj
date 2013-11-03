@@ -69,6 +69,8 @@
     <Compile Include="Downloader.cs" />
     <Compile Include="DeadLockSample.cs" />
     <Compile Include="EventWaitHandleSample.cs" />
+    <Compile Include="InterlockedExchangeSample.cs" />
+    <Compile Include="InterlockedIncrementSample.cs" />
     <Compile Include="LockStatementSample.cs" />
     <Compile Include="MonitorRaceSample.cs" />
     <Compile Include="RaceSample.cs" />
