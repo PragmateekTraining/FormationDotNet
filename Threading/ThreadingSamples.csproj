@@ -68,6 +68,8 @@
     <Compile Include="BarrierSample.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="DeadLockSample.cs" />
+    <Compile Include="EventWaitHandleSample.cs" />
+    <Compile Include="LockStatementSample.cs" />
     <Compile Include="MonitorRaceSample.cs" />
     <Compile Include="RaceSample.cs" />
     <Compile Include="ReaderWriterLockSample.cs" />

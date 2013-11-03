@@ -28,7 +28,8 @@ namespace ThreadingSamples
         {
             new Thread(ToUpper) { IsBackground = true }.Start();
 
-            // DIY Thread.Sleep(100);
+            // DIY
+            // Thread.Sleep(100);
 
             while (true) 
             {

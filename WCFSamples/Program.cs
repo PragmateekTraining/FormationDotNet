@@ -10,7 +10,8 @@ namespace WCFSamples
     {
         static void Main(string[] args)
         {
-            new OneWaySample().Run();
+            // new OneWaySample().Run();
+            new MetadataExchangeSample().Run();
         }
     }
 }
