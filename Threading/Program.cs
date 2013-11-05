@@ -27,7 +27,10 @@ namespace ThreadingSamples
             // new MonitorRaceSample().Run();
             // new EventWaitHandleSample().Run();
             // new InterlockedExchangeSample().Run();
-            new InterlockedIncrementSample().Run();
+            // new InterlockedIncrementSample().Run();
+            // new SimpleConsumerProducerSample(2, 2, 2000, 4000).Run();
+            // new SafeConsumerProducerSample(2, 2, 2000, 4000).Run();
+            new ConcurrentQueueSample().Run();
         }
     }
 }
