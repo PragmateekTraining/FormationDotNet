@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSamples", "WCFSamples\WC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMManagedLogger", "COMManagedLogger\COMManagedLogger.csproj", "{F891A87F-95CC-4E4D-894A-5F41C3231AE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4NetSamples", "Log4NetSamples\Log4NetSamples.csproj", "{EAE845E5-F9F8-4217-AB71-1653EB53CC63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1314,7 +1316,23 @@ Global
 		{F891A87F-95CC-4E4D-894A-5F41C3231AE8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F891A87F-95CC-4E4D-894A-5F41C3231AE8}.Release|Win32.ActiveCfg = Release|Any CPU
 		{F891A87F-95CC-4E4D-894A-5F41C3231AE8}.Release|x64.ActiveCfg = Release|Any CPU
-		{F891A87F-95CC-4E4D-894A-5F41C3231AE8}.Release|x86.ActiveCfg = Release|Any CPU
+		{F891A87F-95CC-4E4D-894A-5F41C3231AE8}.Release|x86.ActiveCfg = Release|x86
+		{F891A87F-95CC-4E4D-894A-5F41C3231AE8}.Release|x86.Build.0 = Release|x86
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|Win32.ActiveCfg = Release|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|x64.ActiveCfg = Release|Any CPU
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|x86.ActiveCfg = Release|x86
+		{EAE845E5-F9F8-4217-AB71-1653EB53CC63}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
