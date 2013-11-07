@@ -94,6 +94,7 @@
     <Compile Include="BackgroundVsForeground.cs" />
     <Compile Include="BarrierSample.cs" />
     <Compile Include="ConcurrentQueueSample.cs" />
+    <Compile Include="CountdownEventRaceSample.cs" />
     <Compile Include="SafeConsumerProducerSample.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="DeadLockSample.cs" />

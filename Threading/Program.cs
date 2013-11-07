@@ -30,7 +30,8 @@ namespace ThreadingSamples
             // new InterlockedIncrementSample().Run();
             // new SimpleConsumerProducerSample(2, 2, 2000, 4000).Run();
             // new SafeConsumerProducerSample(2, 2, 2000, 4000).Run();
-            new ConcurrentQueueSample().Run();
+            // new ConcurrentQueueSample().Run();
+            new CountdownEventRaceSample().Run();
         }
     }
 }
