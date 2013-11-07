@@ -7,3 +7,4 @@ DependencyWalkerSamples/*.dll
 DependencyWalkerSamples/*.obj
 DependencyWalkerSamples/*.exp
 DependencyWalkerSamples/*.lib
+packages/

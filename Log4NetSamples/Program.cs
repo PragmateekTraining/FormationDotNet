@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            new CustomPropertiesSample().Run();
+            // new CustomPropertiesSample().Run();
+            new LoggerAdditivitySample().Run();
         }
     }
 }

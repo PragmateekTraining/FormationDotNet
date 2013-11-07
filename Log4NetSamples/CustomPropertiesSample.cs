@@ -20,8 +20,10 @@ namespace Log4NetSamples
 
             ILog logger = LogManager.GetLogger("Sample");
 
+            logger.Debug("0xFFFF1234");
             logger.Info("Blah blah.");
             logger.Warn("Ooops!");
+            logger.Error("Boom!");
             logger.Fatal("Aaarrrrggghhhhh!");
         }
     }
