@@ -7,7 +7,8 @@
             // new FromEventSample().Run();
             // new TakeLastSample().Run();
             // new SkipLastSample().Run();
-            new AggregateAndScanSamples().Run();
+            // new AggregateAndScanSample().Run();
+            new GroupBySamples().Run();
         }
     }
 }

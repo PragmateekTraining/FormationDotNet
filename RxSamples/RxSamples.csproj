@@ -73,7 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AggregateAndScanSamples.cs" />
+    <Compile Include="AggregateAndScanSample.cs" />
+    <Compile Include="GroupBySample.cs" />
     <Compile Include="TakeLastSample.cs" />
     <Compile Include="FromEventSample.cs" />
     <Compile Include="Program.cs" />
