@@ -5,7 +5,7 @@ using System.Reactive.Subjects;
 
 namespace RxSamples
 {
-    public class GroupBySamples : ISample
+    public class GroupBySample : ISample
     {
         class HREvent
         {

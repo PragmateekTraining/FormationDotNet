@@ -8,7 +8,18 @@
             // new TakeLastSample().Run();
             // new SkipLastSample().Run();
             // new AggregateAndScanSample().Run();
-            new GroupBySamples().Run();
+            // new GroupBySample().Run();
+            // new FileSystemWatcherSample().Run();
+            // new SelectManySample().Run();
+            // new DoSample().Run();
+            // new InternalsSample().Run();
+            // new CatchFinallySample().Run();
+            // new OnErrorResumeNextSample().Run();
+            // new AnimationSample().Run();
+            // new AmbSample().Run();
+            // new PullPushSameThreadSample().Run();
+            // new PullPushSample().Run();
+            new SwitchSample().Run();
         }
     }
 }

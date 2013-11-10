@@ -74,7 +74,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateAndScanSample.cs" />
+    <Compile Include="AmbSample.cs" />
+    <Compile Include="CatchFinallySample.cs" />
+    <Compile Include="PullPushSample.cs" />
+    <Compile Include="DoSample.cs" />
+    <Compile Include="InternalsSample.cs" />
+    <Compile Include="ObservableDictionary.cs" />
+    <Compile Include="OnErrorResumeNextSample.cs" />
+    <Compile Include="AnimationSample.cs" />
+    <Compile Include="PullPushSameThreadSample.cs" />
+    <Compile Include="SelectManySample.cs" />
+    <Compile Include="FileSystemWatcherSample.cs" />
     <Compile Include="GroupBySample.cs" />
+    <Compile Include="SwitchSample.cs" />
     <Compile Include="TakeLastSample.cs" />
     <Compile Include="FromEventSample.cs" />
     <Compile Include="Program.cs" />
