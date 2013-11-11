@@ -31,7 +31,8 @@ namespace ThreadingSamples
             // new SimpleConsumerProducerSample(2, 2, 2000, 4000).Run();
             // new SafeConsumerProducerSample(2, 2, 2000, 4000).Run();
             // new ConcurrentQueueSample().Run();
-            new CountdownEventRaceSample().Run();
+            // new CountdownEventRaceSample().Run();
+            new ClosureSample().Run();
         }
     }
 }

@@ -9,7 +9,7 @@
             // new SkipLastSample().Run();
             // new AggregateAndScanSample().Run();
             // new GroupBySample().Run();
-            // new FileSystemWatcherSample().Run();
+            new FileSystemWatcherSample().Run();
             // new SelectManySample().Run();
             // new DoSample().Run();
             // new InternalsSample().Run();
@@ -19,7 +19,9 @@
             // new AmbSample().Run();
             // new PullPushSameThreadSample().Run();
             // new PullPushSample().Run();
-            new SwitchSample().Run();
+            // new SwitchSample().Run();
+            // new BufferSample().Run();
+            // new ThreadingSample().Run();
         }
     }
 }

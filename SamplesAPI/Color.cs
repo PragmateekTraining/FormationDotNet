@@ -11,6 +11,7 @@ namespace SamplesAPI
         public static Color Green { get { return new Color(ConsoleColor.Green); } }
         public static Color Gray { get { return new Color(ConsoleColor.Gray); } }
         public static Color Blue { get { return new Color(ConsoleColor.Blue); } }
+        public static Color Cyan { get { return new Color(ConsoleColor.Cyan); } }
 
         public Color(ConsoleColor foreground)
         {
