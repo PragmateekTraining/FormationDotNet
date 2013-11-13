@@ -93,9 +93,12 @@
   <ItemGroup>
     <Compile Include="BackgroundVsForeground.cs" />
     <Compile Include="BarrierSample.cs" />
+    <Compile Include="BeginEndInvokeSample.cs" />
     <Compile Include="ClosureSample.cs" />
     <Compile Include="ConcurrentQueueSample.cs" />
+    <Compile Include="LockFreeSample2.cs" />
     <Compile Include="CountdownEventRaceSample.cs" />
+    <Compile Include="LockFreeSample.cs" />
     <Compile Include="SafeConsumerProducerSample.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="DeadLockSample.cs" />
