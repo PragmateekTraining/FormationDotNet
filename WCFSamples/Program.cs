@@ -11,7 +11,8 @@ namespace WCFSamples
         static void Main(string[] args)
         {
             // new OneWaySample().Run();
-            new MetadataExchangeSample().Run();
+            // new MetadataExchangeSample().Run();
+            new FullWebServiceSample().Run();
         }
     }
 }

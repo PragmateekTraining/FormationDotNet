@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html ng-app>
+	<head>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<style>
+			.log-info { background-color: DarkTurquoise; }
+			.log-warning { background-color: DarkOrange; }
+			.log-error { background-color: Tomato; }
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+		<script>
+			function LogsController($scope, $http, $timeout)
+			{
+				$scope.logs = [];
+
+				$scope.start = function()
+				{
+					$http.get("http://localhost:8000/logs/")
+						 .success(function(logs)
+							{
+								for (var i in logs)
+								{
+									$scope.logs.push(logs[i]);
+								}
+
+								var getLogs = function()
+								{
+									var lastLogId = $scope.logs.length > 0 ? $scope.logs[$scope.logs.length - 1].ID : 0;
+
+									$http.get("http://localhost:8000/logs/from/" + (lastLogId + 1))
+										 .success(function(logs)
+										 {
+											for (var i in logs)
+											{
+												$scope.logs.push(logs[i]);
+											}
+
+											$timeout(getLogs, 2000);
+										});
+								};
+
+								$timeout(getLogs, 2000);
+							});
+				};
+			}
+		</script>
+	</head>
+	<body>
+	<div ng-controller="LogsController">
+		<button ng-click="start()">Go</button>
+		<table class="table">
+			<tr><th>ID</th><th>Timestamp</th><th>Level</th><th>Message</th></tr>
+			<tr ng-repeat="log in logs" ng-class="{ 'log-info': log.Level === 'INFO', 'log-warning': log.Level === 'WARNING', 'log-error': log.Level === 'ERROR' }">
+				<td>{{log.ID}}</td>
+				<td>{{log.Timestamp}}</td>
+				<td>{{log.Level}}</td>
+				<td>{{log.Message}}</td>
+			</tr>
+		</table>
+	</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	</body>
+</html>

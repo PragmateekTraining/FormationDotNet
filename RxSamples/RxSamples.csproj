@@ -77,6 +77,7 @@
     <Compile Include="AmbSample.cs" />
     <Compile Include="BufferSample.cs" />
     <Compile Include="CatchFinallySample.cs" />
+    <Compile Include="DistinctUntilChangedSample.cs" />
     <Compile Include="PullPushSample.cs" />
     <Compile Include="DoSample.cs" />
     <Compile Include="InternalsSample.cs" />
