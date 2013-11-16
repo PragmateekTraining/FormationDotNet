@@ -99,6 +99,7 @@
     <Compile Include="LockFreeSample2.cs" />
     <Compile Include="CountdownEventRaceSample.cs" />
     <Compile Include="LockFreeSample.cs" />
+    <Compile Include="PartitioningSample.cs" />
     <Compile Include="SafeConsumerProducerSample.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="DeadLockSample.cs" />

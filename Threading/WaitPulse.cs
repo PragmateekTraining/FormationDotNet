@@ -63,7 +63,7 @@ namespace ThreadingSamples
                 }
             }
 
-            Console.WriteLine("Type enter to exit...");
+            Console.WriteLine("Press enter to exit...");
             Console.ReadLine();
         }
     }

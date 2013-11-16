@@ -154,7 +154,7 @@ namespace WCFSamples
 
             host.Open();
 
-            Console.WriteLine("Type enter to close...");
+            Console.WriteLine("Press enter to close...");
 
             ILogSink proxy = ChannelFactory<ILogSink>.CreateChannel(new WSHttpBinding(), new EndpointAddress("http://localhost:8000/LogSink"));
 

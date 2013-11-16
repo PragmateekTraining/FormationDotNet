@@ -23,7 +23,7 @@ namespace ThreadingSamples
 
             thread.Start();
 
-            Console.WriteLine("Type enter to exit...");
+            Console.WriteLine("Press enter to exit...");
             Console.ReadLine();
             Console.WriteLine("Exiting.");
         }
