@@ -6,7 +6,8 @@
         {
             // new MaxDegreeOfParallelismSample().Run();
             // new CancellationTokenSample().Run();
-            new ExceptionsSample().Run();
+            // new ExceptionsSample().Run();
+            new PartitionerSample().Run();
         }
     }
 }

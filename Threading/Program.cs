@@ -36,7 +36,8 @@ namespace ThreadingSamples
             // new BeginEndInvokeSample().Run();
             // new LockFreeSample().Run();
             // new LockFreeSample2().Run();
-            new PartitioningSample().Run();
+            // new PartitioningSample().Run();
+            new OptimisticConcurrencySample().Run();
         }
     }
 }

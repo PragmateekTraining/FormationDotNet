@@ -64,6 +64,7 @@
     <Compile Include="CancellationTokenSample.cs" />
     <Compile Include="ExceptionsSample.cs" />
     <Compile Include="MaxDegreeOfParallelismSample.cs" />
+    <Compile Include="PartitionerSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
