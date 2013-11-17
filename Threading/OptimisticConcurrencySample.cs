@@ -10,13 +10,13 @@ namespace ThreadingSamples
     public class OptimisticConcurrencySample : ISample
     {
         const string connectionString = "Data Source=data.db;Version=3;";
-        const int n = 20;
+        const int n = 10;
         const int nWorkers = 8;
 
         class Data
         {
             public long ID { get; set; }
-            public string Flag { get; set; }
+            public long Version { get; set; }
             public long Value { get; set; }
         }
 
@@ -27,8 +27,8 @@ namespace ThreadingSamples
                 using (IDbCommand setup = connection.CreateCommand())
                 {
                     setup.CommandText = "DROP TABLE IF EXISTS Data;" +
-                                        "CREATE TABLE Data(id INTEGER PRIMARY KEY, flag TEXT, value INTEGER);" +
-                                        "INSERT INTO Data VALUES(0, NULL, 0);";
+                                        "CREATE TABLE Data(id INTEGER PRIMARY KEY, version INTEGER, value INTEGER);" +
+                                        "INSERT INTO Data VALUES(0, 0, 0);";
                     setup.ExecuteNonQuery();
                 }
             }
@@ -55,7 +55,7 @@ namespace ThreadingSamples
                     data = new Data
                     {
                         ID = (long)reader["id"],
-                        Flag = reader["flag"] as string,
+                        Version = (long)reader["version"],
                         Value = (long)reader["value"]
                     };
                 }
@@ -69,17 +69,22 @@ namespace ThreadingSamples
             return Read(NewConnection());
         }
 
-        bool Write(IDbConnection connection, Data data, string whereFlag = null)
+        bool Write(IDbConnection connection, Data data, long lastKnownVersion = 0)
         {
             bool hasBeenUpdated;
 
-            using (IDbCommand write = connection.CreateCommand())
+            using (IDbTransaction transaction = connection.BeginTransaction())
             {
-                write.CommandText = "UPDATE Data SET flag=@flag,value=@value WHERE id=0 AND (flag=@whereFlag OR flag is NULL)";
-                write.AddParameter("@flag", data.Flag);
-                write.AddParameter("@value", data.Value);
-                write.AddParameter("@whereFlag", whereFlag);
-                hasBeenUpdated = write.ExecuteNonQuery() == 1;
+                using (IDbCommand write = connection.CreateCommand())
+                {
+                    write.CommandText = "UPDATE Data SET version=@version,value=@value WHERE id=0 AND version=@lastKnownVersion";
+                    write.AddParameter("@version", data.Version);
+                    write.AddParameter("@value", data.Value);
+                    write.AddParameter("@lastKnownVersion", lastKnownVersion);
+                    hasBeenUpdated = write.ExecuteNonQuery() == 1;
+                }
+
+                transaction.Commit();
             }
 
             return hasBeenUpdated;
@@ -118,9 +123,9 @@ namespace ThreadingSamples
                     {
                         try
                         {
-                            using (IDbCommand @lock = connection.CreateCommand())
+                            using (IDbTransaction transaction = connection.BeginTransaction())
                             {
-                                using (IDbTransaction transaction = connection.BeginTransaction())
+                                using (IDbCommand @lock = connection.CreateCommand())    
                                 {
                                     @lock.CommandText = "PRAGMA locking_mode=EXCLUSIVE;";
                                     @lock.ExecuteNonQuery();
@@ -148,8 +153,6 @@ namespace ThreadingSamples
 
         void OptimisticCount()
         {
-            string me = Guid.NewGuid().ToString();
-
             bool hasBeenUpdated = false;
 
             Data data;
@@ -159,18 +162,23 @@ namespace ThreadingSamples
                 {
                     Console.WriteLine(i);
 
+                    long currentVersion;
+                    long currentValue;
                     do
                     {
                         data = Read(connection);
 
-                        string initialFlag = data.Flag;
+                        currentVersion = data.Version;
+                        currentValue = data.Value;
 
                         ++data.Value;
-                        data.Flag = me;
+                        ++data.Version;
 
-                        hasBeenUpdated = Write(connection, data, initialFlag);
+                        hasBeenUpdated = Write(connection, data, currentVersion);
                     }
                     while (!hasBeenUpdated);
+
+                    // Console.WriteLine("[{0}] '{1}' -> '{2}' / '{3}' -> '{4}'", Thread.CurrentThread.ManagedThreadId, initialFlag, me, initialValue, data.Value);
                 }
             }
         }
