@@ -1,0 +1,49 @@
+﻿<metro:MetroWindow x:Class="StockScreener.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:charts="clr-namespace:Visiblox.Charts;assembly=Visiblox.Charts"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="MainWindow">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Left" Width="150">
+            <TextBox Margin="5" DockPanel.Dock="Top" Text="{Binding Model.Symbol}"></TextBox>
+            <Button Command="{Binding Model.Add}" CommandParameter="{Binding Model.Symbol}" Margin="5" DockPanel.Dock="Top">Add</Button>
+            <ListBox ItemsSource="{Binding Model.Stocks}" VerticalAlignment="Stretch" Margin="5" SelectedItem="{Binding Model.SelectedStock,Mode=OneWayToSource}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <DockPanel Margin="1">
+                            <Button DockPanel.Dock="Right" Command="{Binding Delete}" CommandParameter="{Binding}" Margin="1" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30">X</Button>
+                            <TextBlock Text="{Binding Symbol}" VerticalAlignment="Center"></TextBlock>
+                        </DockPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DockPanel>
+        <charts:Chart Name="PricesChart" ValidationKey="uaIIPbq0KV+bgNPMjAxMzEyMTdpbmZvQHZpc2libG94LmNvbQ==T1s/A5obDRoyvqukmXwq1sDLek3skR1M76KDL1Sw5JAh8h2ESf7If57HAOFJEzLCRotwB3eofUDxu5Jep+pzxuJPIkqNT6nm5j3x0eQj5JLjRa+kaMH/hJlD2lDfdvh/ssFxf9cQNfo5wUfzY/s60SLWuCtM=FK3nC3fd9nWo+ym17pG67kLlxZrtTvFGNRswBlGlbo6S9lqlQq82NmTVFkLVcoJm86GSbCVzvaObAfqWpLz9r5EjVqmHQQa19hn0N3Zj2u4FnH7Xwjiamyw6xcNSGeXCHrbwNBNCzgstJ7Zi02jS7vIBGQjtwNP3sBS/xnSh22U=BgIAAACkAABSU0ExAAQAAAEAAQDt3S3qxAM8yNEXhGgs3T1PU7cfiXn50OnOOCYImOYRtty7rGuxe91l0HZF7ik22yYSGdbCDHfa8DXgFnUsFykFfHL6KXHNPN+U9Inwlpf0FqFzYyUy4nwsm7MP+Jj38vBiEu2aWZ66eKSH9mxQP5DvAqzwzt0kHwC6YRfIktM2xw==">
+            <charts:Chart.XAxis>
+                <charts:DateTimeAxis />
+            </charts:Chart.XAxis>
+            <charts:Chart.YAxis>
+                <charts:LinearAxis />
+            </charts:Chart.YAxis>
+            <charts:Chart.Series>
+                <charts:LineSeries>
+                    <charts:LineSeries.DataSeries>
+                        <charts:BindableDataSeries ItemsSource="{Binding Model.SelectedStock.Prices}" XValueBinding="{Binding Key}" YValueBinding="{Binding Value}" />
+                    </charts:LineSeries.DataSeries>
+                </charts:LineSeries>
+            </charts:Chart.Series>
+        </charts:Chart>
+    </DockPanel>
+</metro:MetroWindow>

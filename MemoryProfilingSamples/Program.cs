@@ -10,7 +10,9 @@ namespace MemoryProfilingSamples
     {
         static void Main(string[] args)
         {
-            new MemoryProfilingSample().Run();
+            // new MemoryProfilingSample().Run();
+            // new MemoryLeakSample().Run();
+            new CommitSizeSample().Run();
         }
     }
 }

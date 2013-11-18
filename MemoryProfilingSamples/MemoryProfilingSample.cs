@@ -12,7 +12,7 @@ namespace MemoryProfilingSamples
     {
         class Big
         {
-            byte[] data = new byte[1 << 20];
+            public byte[] Data = new byte[1 << 20];
         }
 
         class BigBunch
@@ -27,25 +27,42 @@ namespace MemoryProfilingSamples
 
         public void Run()
         {
-            BigBunch bigBunch = new BigBunch();
+            IList<BigBunch> bigBunches = new List<BigBunch>();
 
-            Console.WriteLine("Press 'a' to allocate a new instance, 'd' to delete one, 'n' to nullify big bunch...");
+            bigBunches.Add(new BigBunch());
+            bigBunches.Add(new BigBunch());
+
+            Console.WriteLine("Press 'a' to allocate a new instance, 'd' to delete one, 'n' to nullify big bunch, 'r' to reference...");
+
+            BigBunch reference = new BigBunch();
 
             while (true)
             {
-                char input = Console.ReadKey().KeyChar;
+                ConsoleKeyInfo key = Console.ReadKey();
 
-                if (input == 'a')
+                if (key.Key == ConsoleKey.Enter) break;
+
+                char action = key.KeyChar;
+
+                int target = int.Parse(Console.ReadKey().KeyChar.ToString());
+
+                if (action == 'a')
                 {
-                    bigBunch.bigList.Add(new Big());
+                    bigBunches[target].bigList.Add(new Big());
                 }
-                else if (input == 'd' && bigBunch.bigList.Count > 0)
+                else if (action == 'd' && bigBunches[target].bigList.Count > 0)
                 {
-                    bigBunch.bigList.RemoveAt(bigBunch.bigList.Count - 1);
+                    bigBunches[target].bigList.RemoveAt(bigBunches[target].bigList.Count - 1);
                 }
-                else if (input == 'n')
+                else if (action == 'n')
                 {
-                    bigBunch = null;
+                    bigBunches[target] = null;
+                }
+                else if (action == 'r')
+                {
+                    reference.bigList.Add(bigBunches[target].bigList[0]);
+                    /*reference.bigList.Add(null);
+                    reference.bigList.Remove(null);*/
                 }
             }
         }

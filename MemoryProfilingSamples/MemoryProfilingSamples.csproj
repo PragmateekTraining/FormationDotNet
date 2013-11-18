@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommitSizeSample.cs" />
+    <Compile Include="MemoryLeakSample.cs" />
     <Compile Include="MemoryProfilingSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
