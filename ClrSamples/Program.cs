@@ -6,7 +6,8 @@
         {
             // new PEVerifySample().Run();
             // new UninitializedMemorySample().Run();
-            new FinalizersSamples().Run();
+            // new FinalizersSamples().Run();
+            new ComparisonSample().Run();
         }
     }
 }

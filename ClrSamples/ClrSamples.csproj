@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsComplianceSample.cs" />
+    <Compile Include="ComparisonSample.cs" />
     <Compile Include="FinalizersSamples.cs" />
+    <Compile Include="ReferencesAndValuesAllocationSample.cs" />
     <Compile Include="UninitializedMemorySample.cs" />
     <Compile Include="PEVerifySample.cs" />
     <Compile Include="Program.cs" />

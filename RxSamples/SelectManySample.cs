@@ -8,18 +8,21 @@ using System.Reactive.Linq;
 
 namespace RxSamples
 {
+    /// <summary>
+    /// Illustrate the use of the Observable.SelectMany extension method.
+    /// 
+    /// We build a table of words grouped by their first letter:
+    /// 'a' => { "apple", "ananas" }
+    /// 'b' => { "banana" }
+    /// 'c' => { "cherry" }
+    /// ...
+    /// 
+    /// This table is structure is abstracted and exposed as a stream of words thanks to SelectMany.
+    /// </summary>
     public class SelectManySample : ISample
     {
         public void Run()
         {
-            /* Observable.Interval(TimeSpan.FromSeconds(1))
-                      .SelectMany(i => Observable.Interval(TimeSpan.FromSeconds(1))
-                                                 .Select(j => (i + 1) * (j + 1)))
-                      .Distinct()
-                      .Subscribe(e => Console.WriteLine(e));
-
-            Console.ReadLine();*/
-
             ObservableDictionary<char, ObservableCollection<string>> words = new ObservableDictionary<char, ObservableCollection<string>>();
 
             IDisposable wordsSubscription = Observable.FromEventPattern<NotifyCollectionChangedEventArgs>(words, "CollectionChanged")

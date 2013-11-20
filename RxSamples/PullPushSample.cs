@@ -37,13 +37,16 @@ namespace RxSamples
 
             Console.WriteLine("Before subscription.");
 
-            Numbers.ToObservable(Scheduler.ThreadPool)
+            IDisposable subscription = Numbers.ToObservable(ThreadPoolScheduler.Instance)
                    .Subscribe(Console.WriteLine);
 
             Console.WriteLine("After subscription.");
 
-            Console.WriteLine("Press enter to end.");
-            Console.ReadLine();
+            using (subscription)
+            {
+                Console.WriteLine("Press enter to end.");
+                Console.ReadLine();
+            }
         }
     }
 }

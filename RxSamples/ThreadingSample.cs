@@ -1,12 +1,8 @@
 ﻿using SamplesAPI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace RxSamples
 {
@@ -38,7 +34,7 @@ namespace RxSamples
                 o.OnNext(1);
                 return () => { };
             })
-            .SubscribeOn(Scheduler.ThreadPool)
+            .SubscribeOn(ThreadPoolScheduler.Instance)
             .Subscribe(i => DumpCurrentThread("Notification"));
 
             Console.WriteLine("After create.");
@@ -50,8 +46,8 @@ namespace RxSamples
                 o.OnNext(1);
                 return () => { };
             })
-            .SubscribeOn(Scheduler.ThreadPool)
-            .ObserveOn(Scheduler.ThreadPool)
+            .SubscribeOn(ThreadPoolScheduler.Instance)
+            .ObserveOn(ThreadPoolScheduler.Instance)
             .Subscribe(i => DumpCurrentThread("Notification"));
 
             Console.WriteLine("After create.");

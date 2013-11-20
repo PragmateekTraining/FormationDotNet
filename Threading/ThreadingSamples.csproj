@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ThreadingSamples</RootNamespace>
-    <AssemblyName>Threading</AssemblyName>
+    <AssemblyName>ThreadingSamples</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -122,9 +122,11 @@
     <Compile Include="Priorities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemaphoreSample.cs" />
     <Compile Include="SimpleConsumerProducerSample.cs" />
     <Compile Include="Stop.cs" />
     <Compile Include="ThreadLocalSample.cs" />
+    <Compile Include="ThreadPoolSample.cs" />
     <Compile Include="ThreadStaticSample.cs" />
     <Compile Include="UI.cs" />
     <Compile Include="WaitPulse.cs" />

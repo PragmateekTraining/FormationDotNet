@@ -10,7 +10,8 @@ namespace RxSamples
         {
             Random rand = new Random();
 
-            Func<int, IObservable<int>> factory = i => Observable.Timer(TimeSpan.FromMilliseconds(rand.Next(1000)), TimeSpan.FromSeconds(1)).Select(l => i);
+            Func<int, IObservable<int>> factory = i => Observable.Timer(TimeSpan.FromMilliseconds(rand.Next(1000)), TimeSpan.FromSeconds(1))
+                                                                 .Select(l => i);
 
             while (true)
             {

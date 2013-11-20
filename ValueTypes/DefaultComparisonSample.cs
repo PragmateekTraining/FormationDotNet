@@ -11,6 +11,7 @@ namespace ValueTypesSamples
 
             public override int GetHashCode()
             {
+                Console.WriteLine("A.GetHashCode");
                 return 0;
             }
 
