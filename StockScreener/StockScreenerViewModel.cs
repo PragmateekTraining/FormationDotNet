@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace StockScreener
@@ -55,6 +56,20 @@ namespace StockScreener
 
         public ICommand Add { get; private set; }
 
+        bool isLoading;
+        public bool IsLoading
+        {
+            get { return isLoading; }
+            set
+            {
+                if (value != isLoading)
+                {
+                    isLoading = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("IsLoading"));
+                }
+            }
+        }
+
         StockViewModel selectedStock;
         public StockViewModel SelectedStock
         {
@@ -78,16 +93,27 @@ namespace StockScreener
 
         void AddStock(string symbol)
         {
-            IDictionary<DateTime, double> prices = market.RegisterForPrices(symbol);
+            BackgroundWorker worker = new BackgroundWorker();
 
-            StockViewModel model = new StockViewModel
-            {
-                Symbol = symbol,
-                Prices = prices,
-                Delete = new DeleteCommand(DeleteStock)
-            };
+            worker.DoWork += (_, __) =>
+                {
+                    IDictionary<DateTime, double> prices = market.RegisterForPrices(symbol);
 
-            Stocks.Add(model);
+                    StockViewModel model = new StockViewModel
+                    {
+                        Symbol = symbol,
+                        Prices = prices,
+                        Delete = new DeleteCommand(DeleteStock)
+                    };
+
+                    Application.Current.Dispatcher.Invoke(() => Stocks.Add(model));
+                };
+
+            worker.RunWorkerCompleted += (_, __) => IsLoading = false;
+
+            IsLoading = true;
+
+            worker.RunWorkerAsync();
         }
 
         void DeleteStock(StockViewModel model)

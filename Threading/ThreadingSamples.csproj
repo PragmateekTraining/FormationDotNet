@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackgroundVsForeground.cs" />
+    <Compile Include="BackgroundWorkerSample.cs" />
     <Compile Include="BarrierSample.cs" />
     <Compile Include="BeginEndInvokeSample.cs" />
     <Compile Include="ClosureSample.cs" />

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace StockScreener
 {
     public class PricesGenerator
     {
-        const int nPerDay = 10;
+        const int nPerDay = 1;
 
         Random rand = new Random();
 
@@ -33,6 +34,9 @@ namespace StockScreener
                 price += price * v / (365 * nPerDay) * (W[i + 1] - W[i]);
                 ++i;
             }
+
+            // Simulate some hard work
+            Thread.Sleep(2000);
 
             return prices;
         }

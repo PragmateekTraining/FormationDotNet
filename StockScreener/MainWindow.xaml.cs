@@ -31,5 +31,15 @@ namespace StockScreener
 
             DataContext = this;
         }
+
+        private void BindableDataSeries_SourceUpdated_1(object sender, DataTransferEventArgs e)
+        {
+
+        }
+
+        private void BindableDataSeries_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

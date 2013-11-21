@@ -65,8 +65,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContinuationsSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskCompletionSourceSample.cs" />
     <Compile Include="TPLDataflowSample.cs" />
   </ItemGroup>
   <ItemGroup>

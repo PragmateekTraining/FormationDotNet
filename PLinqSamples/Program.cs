@@ -40,6 +40,7 @@ namespace PLinqSamples
         static void Main(string[] args)
         {
             // new BrokenPipelineSample().Run();
+            new WebClientSample().Run();
 
             /*const int n = 100;
 
