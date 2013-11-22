@@ -6,6 +6,7 @@ obj/
 NativeLibrary/Debug/
 *.opensdf
 Tools/
+BinarySerialization/*.dll
 DependencyWalkerSamples/*.dll
 DependencyWalkerSamples/*.obj
 DependencyWalkerSamples/*.exp
