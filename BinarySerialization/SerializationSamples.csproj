@@ -54,7 +54,7 @@
   <ItemGroup>
     <Reference Include="A, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\A.dll</HintPath>
+      <HintPath>.\A.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\lib\NUnit\nunit.framework.dll</HintPath>
