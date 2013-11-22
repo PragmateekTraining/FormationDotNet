@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GCSamples
+﻿namespace GCSamples
 {
     class Program
     {
@@ -13,7 +6,9 @@ namespace GCSamples
         {
             // new GCNotificationSample((GCLatencyMode)Enum.Parse(typeof(GCLatencyMode), args[0])).Run();
             // new GCGenerationsSample().Run();
-            new MemoryFailPointSample().Run();
+            new GenerationsSizeSample().Run();
+            // new HostPageSizeSample().Run();
+            // new MemoryFailPointSample().Run();
         }
     }
 }

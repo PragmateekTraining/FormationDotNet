@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommitSizeSample.cs" />
+    <Compile Include="MemoryAlignmentSample.cs" />
     <Compile Include="MemoryLeakSample.cs" />
     <Compile Include="MemoryProfilingSample.cs" />
     <Compile Include="Program.cs" />

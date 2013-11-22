@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MemoryProfilingSamples
+﻿namespace MemoryProfilingSamples
 {
     class Program
     {
         static void Main(string[] args)
         {
+            new MemoryAlignmentSample().Run();
             // new MemoryProfilingSample().Run();
             // new MemoryLeakSample().Run();
-            new CommitSizeSample().Run();
+            // new CommitSizeSample().Run();
         }
     }
 }
