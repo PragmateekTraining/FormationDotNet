@@ -113,10 +113,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\CLRHost\bin\Release\CLRHost.exe">
+    <Content Include="..\bin\CLRHost\CLRHost.exe">
       <Link>CLRHost.exe</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Content Include="native.c" />
     <None Include="AccessViolation\build.bat" />
     <None Include="AccessViolation\AccessViolation.il" />
