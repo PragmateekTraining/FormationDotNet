@@ -59,8 +59,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tools.PrecompiledRegex">
-      <HintPath>..\PrecompiledRegexGenerator\bin\Release\Tools.PrecompiledRegex.dll</HintPath>
+    <Reference Include="Tools.PrecompiledRegex, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Tools.PrecompiledRegex.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="copy_precompiled_regex_assembly.bat" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SamplesAPI\SamplesAPI.csproj">

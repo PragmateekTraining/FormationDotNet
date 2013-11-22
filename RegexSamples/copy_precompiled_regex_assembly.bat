@@ -1,0 +1,1 @@
+xcopy ..\bin\PrecompiledRegexGenerator\Release\Tools.PrecompiledRegex.dll .
