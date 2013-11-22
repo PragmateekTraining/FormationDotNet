@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace ValueTypes
+namespace ValueTypesSamples
 {
     [TestFixture]
     class Tests
@@ -11,18 +11,6 @@ namespace ValueTypes
         {
             Assert.AreEqual(new ReportID("John Doe", 42), new ReportID("John Doe", 42));
             Assert.AreNotEqual(new ReportID("John Doe", 42), new ReportID("John doe", 42));
-        }
-
-        [Test]
-        public void CanUseAValueTypeAsADictionaryKey()
-        {
-            IDictionary<ReportID, string> reports = new Dictionary<ReportID, string>();
-
-            string message = "Sir, you've failed.\nPlease die.";
-
-            reports[new ReportID("John Doe", 42)] = message;
-
-            Assert.AreEqual(message, reports[new ReportID("John Doe", 42)]);
         }
 
         [Test]
