@@ -87,6 +87,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common.cs" />
+    <None Include="build_library.bat" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GOOG_prices.csv">
@@ -101,9 +102,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>csc /target:library B.cs
-csc /reference:B.dll /target:library A.cs
-csc /target:library /out:C.dll B.cs</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
