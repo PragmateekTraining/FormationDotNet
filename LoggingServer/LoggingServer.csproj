@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net">
-      <HintPath>..\Tools\protobuf-net\Full\portable\protobuf-net.dll</HintPath>
+      <HintPath>..\lib\Protobuf\3.0\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
