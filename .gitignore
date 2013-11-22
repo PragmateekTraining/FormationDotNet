@@ -10,4 +10,6 @@ DependencyWalkerSamples/*.dll
 DependencyWalkerSamples/*.obj
 DependencyWalkerSamples/*.exp
 DependencyWalkerSamples/*.lib
+ILMergeSamples/*.dll
+ILMergeSamples/*.pdb
 packages/
