@@ -41,7 +41,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAPI", "ChatAPI\ChatAPI.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderSamples", "StringBuilder\StringBuilderSamples.csproj", "{B276E83B-5693-4107-A65D-8511E19C96C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalsVsDoublesSamples", "DecimalsVsDoubles\DecimalsVsDoublesSamples.csproj", "{337BC103-EF30-439A-805C-8058C3B2C86E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalsSamples", "DecimalsVsDoubles\DecimalsSamples.csproj", "{337BC103-EF30-439A-805C-8058C3B2C86E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpSamples", "FTP\FtpSamples.csproj", "{04E94514-2E4B-4D1F-9965-24A37A411311}"
 EndProject

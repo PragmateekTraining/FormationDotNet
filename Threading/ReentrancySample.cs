@@ -7,10 +7,14 @@ using System.Threading;
 
 namespace ThreadingSamples
 {
+    /// <summary>
+    /// Illustrate the reentrant behavior of some synchronization primitives.
+    /// </summary>
     public class ReentrancySample : ISample
     {
         public void Run()
         {
+            // Mutex supports reentrancy.
             using (Mutex mutex = new Mutex())
             {
                 Console.WriteLine("First wait");
@@ -21,6 +25,7 @@ namespace ThreadingSamples
 
             Console.WriteLine("Done with mutex");
 
+            // ReaderWriterLockSlim does not support reentrancy by default...
             using (ReaderWriterLockSlim rwls = new ReaderWriterLockSlim())
             {
                 try
@@ -30,6 +35,7 @@ namespace ThreadingSamples
                     Console.WriteLine("Second wait");
                     try
                     {
+                        // Will throw
                         rwls.EnterWriteLock();
                     }
                     catch (Exception e)
@@ -37,7 +43,7 @@ namespace ThreadingSamples
                         Console.WriteLine("Caugh exception:\n{0}", e);
                     }
                 }
-                finally
+                finally // Exit only the first lock acquisition
                 {
                     rwls.ExitWriteLock();
                 }
@@ -45,6 +51,7 @@ namespace ThreadingSamples
 
             Console.WriteLine("Done with reader-writer lock");
 
+            // ... but it can be changed.
             using (ReaderWriterLockSlim rwls = new ReaderWriterLockSlim(LockRecursionPolicy.SupportsRecursion))
             {
                 try
@@ -54,18 +61,19 @@ namespace ThreadingSamples
                     Console.WriteLine("Second wait");
                     try
                     {
+                        // OK because the lock is reentrant
                         rwls.EnterWriteLock();
                     }
                     catch (Exception e)
                     {
                         Console.WriteLine("Caugh exception:\n{0}", e);
                     }
-                    finally
+                    finally // Exit the first lock acquisition
                     {
                         rwls.ExitWriteLock();
                     }
                 }
-                finally
+                finally // And exit the second lock acquisition
                 {
                     rwls.ExitWriteLock();
                 }

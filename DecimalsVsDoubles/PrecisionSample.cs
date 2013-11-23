@@ -2,7 +2,7 @@
 using SamplesAPI;
 using System.Diagnostics;
 
-namespace DecimalsVsDoubles
+namespace DecimalsSamples
 {
     public class PrecisionSample : ISample
     {
