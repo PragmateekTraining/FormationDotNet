@@ -12,14 +12,24 @@ namespace ThreadingSamples
             // LifeCycle.Run();
             // Priorities.Run();
             // UI.Run();
-            // new WaitPulse().Run();
-            // new MutexOwnership().CanEnsureOwnership();
-            // new Scalability().Run();
             // new BackgroundVsForeground().Run(true);
-            // new Downloader().Run();
+            // new BackgroundWorkerSample().Run();
             // new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
-            // new ReentrancySample().Run();
+            // new BeginEndInvokeSample().Run();
+            // new Downloader().Run();
+            // new LockFreeSample().Run();
+            // new LockFreeSample2().Run();
+            new MemoryVisibilitySample().Run();
+            // new MutexOwnership().CanEnsureOwnership();
+            // new OptimisticConcurrencySample().Run();
+            // new PartitioningSample().Run();
             // new ReaderWriterLockSample(1000, 0m, 1m, 0.05m, 4).Run();
+            // new ReentrancySample().Run();            
+            // new Scalability().Run();
+            // new SemaphoreSample().Run();
+            // new ThreadPoolSample().Run();
+            // new WaitPulse().Run();            
+            
             // new ThreadStaticSample().Run();
             // new ThreadLocalSample().Run();
             // new RaceSample().Run();
@@ -33,14 +43,6 @@ namespace ThreadingSamples
             // new ConcurrentQueueSample().Run();
             // new CountdownEventRaceSample().Run();
             // new ClosureSample().Run();
-            // new BeginEndInvokeSample().Run();
-            // new LockFreeSample().Run();
-            // new LockFreeSample2().Run();
-            // new PartitioningSample().Run();
-            // new OptimisticConcurrencySample().Run();
-            // new ThreadPoolSample().Run();
-            // new SemaphoreSample().Run();
-            new BackgroundWorkerSample().Run();
         }
     }
 }

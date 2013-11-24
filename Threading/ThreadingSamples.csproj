@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -103,6 +103,7 @@
     <Compile Include="LockFreeSample2.cs" />
     <Compile Include="CountdownEventRaceSample.cs" />
     <Compile Include="LockFreeSample.cs" />
+    <Compile Include="MemoryVisibilitySample.cs" />
     <Compile Include="OptimisticConcurrencySample.cs" />
     <Compile Include="PartitioningSample.cs" />
     <Compile Include="SafeConsumerProducerSample.cs" />

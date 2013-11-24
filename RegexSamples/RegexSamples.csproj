@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="BacktrackingSample.cs" />
     <Compile Include="AnchorsSample.cs" />
+    <Compile Include="DisabledBacktrackingSample.cs" />
     <Compile Include="ExponentialBacktrackingSample.cs" />
     <Compile Include="CompiledRegexSample.cs" />
     <Compile Include="Program.cs" />
