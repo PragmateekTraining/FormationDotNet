@@ -12,10 +12,10 @@
 		<script>
 			function LogsController($scope, $http, $timeout)
 			{
-				$scope.logs = [];
-
 				$scope.start = function()
 				{
+          $scope.logs = [];
+        
 					$http.get("http://localhost:8000/logs/")
 						 .success(function(logs)
 							{
