@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FullWebServiceSample.cs" />
+    <Compile Include="InstanciationModesSample.cs" />
     <Compile Include="MetadataExchangeSample.cs" />
     <Compile Include="OneWaySample.cs" />
     <Compile Include="Program.cs" />

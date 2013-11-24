@@ -41,13 +41,6 @@ namespace SamplesAPI
             {
                 Monitor.Exit(Console.Out);
             }
-
-            GC.SuppressFinalize(this);
-        }
-
-        ~Color()
-        {
-            Dispose();
         }
     }
 }

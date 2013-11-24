@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="ConsoleColorSample.cs" />
     <Compile Include="DisposablesSample.cs" />
+    <Compile Include="DisposePatternTemplateSample.cs" />
     <Compile Include="EventHandlerSample.cs" />
     <Compile Include="UsingStatementDisassemblingSample.cs" />
     <Compile Include="UsingStatementSample.cs" />
