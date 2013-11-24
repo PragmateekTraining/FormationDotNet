@@ -1,7 +1,7 @@
 ﻿using System;
 using SamplesAPI;
 
-namespace GotchasSamples
+namespace ConstantValuesSamples
 {
     public class EnumsSample : ISample
     {

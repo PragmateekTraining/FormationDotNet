@@ -2,7 +2,7 @@
 using SamplesAPI;
 using System.IO;
 
-namespace GotchasSamples
+namespace ConstantValuesSamples
 {
     public class ConstVsReadonlySample : ISample
     {

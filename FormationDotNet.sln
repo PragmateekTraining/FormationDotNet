@@ -71,7 +71,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionSamples", "Reflec
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chat", "Chat", "{F8C77224-DD0C-407C-827B-AC823701A134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotchasSamples", "GotchasSamples\GotchasSamples.csproj", "{F12E2EFC-983A-491E-B117-45E8DA22F88E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstantValuesSamples", "GotchasSamples\ConstantValuesSamples.csproj", "{F12E2EFC-983A-491E-B117-45E8DA22F88E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeakReferencesSamples", "WeakReferencesSamples\WeakReferencesSamples.csproj", "{E3B21E63-41D1-4C5C-AAF5-1E4AAE77C849}"
 EndProject

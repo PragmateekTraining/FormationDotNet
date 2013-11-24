@@ -67,11 +67,14 @@
     <Compile Include="BasicSample.cs" />
     <Compile Include="BoxingPerformanceImpactSample.cs" />
     <Compile Include="BulkAllocationSample.cs" />
+    <Compile Include="InterfaceImplementationSample.cs" />
+    <Compile Include="MutableValueSample.cs" />
     <Compile Include="DefaultComparisonSample.cs" />
     <Compile Include="DictionaryKeySample.cs" />
     <Compile Include="EqualsOverloadSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyValueSample.cs" />
     <Compile Include="ReportingID.cs" />
     <Compile Include="Tests.cs" />
   </ItemGroup>
