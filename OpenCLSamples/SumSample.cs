@@ -84,7 +84,8 @@ __kernel void sum_with_local_copy(__global float* a, __global float* b, __global
             ComputeBuffer<float> sumBuffer = new ComputeBuffer<float>(context, ComputeMemoryFlags.UseHostPointer | ComputeMemoryFlags.WriteOnly, sum);
             ComputeBuffer<float> sumWithLocalCopyBuffer = new ComputeBuffer<float>(context, ComputeMemoryFlags.UseHostPointer | ComputeMemoryFlags.WriteOnly, sumWithLocal);
 
-            long localSize = GPU.MaxWorkGroupSize;
+            // long localSize = GPU.MaxWorkGroupSize;
+            long localSize = 4;
 
             sumKernel.SetMemoryArgument(0, aBuffer);
             sumKernel.SetMemoryArgument(1, bBuffer);
