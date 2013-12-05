@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            // new StopwatchSample().Run();
             new EqualityOperatorSample().Run();
+            // new StopwatchSample().Run();            
         }
     }
 }

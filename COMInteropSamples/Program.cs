@@ -6,10 +6,9 @@ namespace COMInteropSamples
         // [STAThread]
         static void Main(string[] args)
         {
-            // new ExcelAutomationSample().Run();
-            // Console.WriteLine(Environment.UserName);
-            // new NativeCOMSample("azertyuyiiop!").Run();
             new CSComponentSample().Run();
+            // new ExcelAutomationSample().Run();
+            // new NativeCOMSample("azertyuyiiop!").Run();            
             // new TlbImpSample().Run();
         }
     }

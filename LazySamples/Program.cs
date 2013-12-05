@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LazySamples
+﻿namespace LazySamples
 {
     class Program
     {
@@ -12,10 +6,10 @@ namespace LazySamples
         {
             // new DeadLockSample().Run();
             // new DefaultInstantiationSample().Run();
-            // new NotThreadSafeSample().Run();
-            // new ThreadSafetyCostSample().Run();
             // new LazyInitializerSample().Run();
+            // new NotThreadSafeSample().Run();
             new PublicationOnlySample().Run();
+            // new ThreadSafetyCostSample().Run();
         }
     }
 }

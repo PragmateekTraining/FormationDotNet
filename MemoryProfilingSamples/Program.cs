@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            new MemoryAlignmentSample().Run();
-            // new MemoryProfilingSample().Run();
-            // new MemoryLeakSample().Run();
             // new CommitSizeSample().Run();
+            new MemoryAlignmentSample().Run();
+            // new MemoryLeakSample().Run();
+            // new MemoryProfilingSample().Run();
         }
     }
 }
