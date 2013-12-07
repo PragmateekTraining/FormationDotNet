@@ -6,8 +6,8 @@
         {
             // new FullWebServiceSample().Run();
             new InstanciationModesSample().Run();
-            // new OneWaySample().Run();
             // new MetadataExchangeSample().Run();
+            // new OneWaySample().Run();            
         }
     }
 }

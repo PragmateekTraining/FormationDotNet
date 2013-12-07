@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            // new AssemblyResolveSample().Run();
-            // new EventsSerializationSample().Run();
+            // new AssemblyResolveSample().Run();            
             // new ComplexSerializationSample().Run();
+            // new EventsSerializationSample().Run();
             new ISerializablePerformanceSample().Run();
         }
     }
