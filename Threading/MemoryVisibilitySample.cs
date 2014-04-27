@@ -6,11 +6,13 @@ namespace ThreadingSamples
 {
     public class MemoryVisibilitySample : ISample
     {
-        volatile bool ok = false;
+        // volatile bool ok = false;
+        /*static*/ bool ok = false;
 
-        void F()
+        /*static*/ void F()
         {
-            Console.WriteLine();
+            // Debugger.Break();
+            // Console.WriteLine();
             // int n = 0;
             // while (!ok) ++n;
             while (!ok) /*Thread.MemoryBarrier()*/;
