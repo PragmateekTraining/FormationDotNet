@@ -1,5 +1,7 @@
 ﻿using SamplesAPI;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.ComponentModel;
 using System.Threading;
 
@@ -7,8 +9,12 @@ namespace ThreadingSamples
 {
     public class BackgroundWorkerSample : ISample
     {
+        private HashSet<int> usedThreads = new HashSet<int>();
+
         public void Run()
         {
+            Console.WriteLine("Primary thread is n°{0}", Thread.CurrentThread.ManagedThreadId);
+
             BackgroundWorker worker = new BackgroundWorker
             {
                 WorkerReportsProgress = true,
@@ -17,9 +23,17 @@ namespace ThreadingSamples
 
             worker.DoWork += Frame;
 
-            worker.ProgressChanged += (object sender, ProgressChangedEventArgs args) => Console.Write("\r{0}%", args.ProgressPercentage);
+            worker.ProgressChanged += (object sender, ProgressChangedEventArgs args) =>
+                {
+                    Console.Write("\r{0}% [{1}]", args.ProgressPercentage, Thread.CurrentThread.ManagedThreadId);
+                    usedThreads.Add(Thread.CurrentThread.ManagedThreadId);
+                };
 
-            worker.RunWorkerCompleted += (object sender, RunWorkerCompletedEventArgs args) => Console.WriteLine("\r{0}", !args.Cancelled ? args.Result : "---");
+            worker.RunWorkerCompleted += (object sender, RunWorkerCompletedEventArgs args) =>
+                {
+                    Console.WriteLine("\r{0} [{1}]", !args.Cancelled ? args.Result : "---", Thread.CurrentThread.ManagedThreadId);
+                    Console.WriteLine("Threads used for notification: {0}", usedThreads.Aggregate("", (a, id) => (a != "" ? ( a + ",") : "") + id));
+                };
 
             Console.WriteLine("Press enter to stop...");
 
@@ -39,7 +53,14 @@ namespace ThreadingSamples
 
         private static void Frame(object sender, DoWorkEventArgs e)
         {
-            Console.WriteLine("Task is{0} running on a pool's thread.", Thread.CurrentThread.IsThreadPoolThread ? "" : " not");
+            if (Thread.CurrentThread.IsThreadPoolThread)
+            {
+                Console.WriteLine("Task is running on pool's thread n°{0}.", Thread.CurrentThread.ManagedThreadId);
+            }
+            else
+            {
+                Console.WriteLine("Task is not running on a pool's thread.");
+            }
 
             for (int p = 0; p <= 100 && !e.Cancel; ++p)
             {

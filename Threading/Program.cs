@@ -8,7 +8,7 @@
             // Priorities.Run();
             // UI.Run();
             // new BackgroundVsForeground().Run(true);
-            // new BackgroundWorkerSample().Run();
+            new BackgroundWorkerSample().Run();
             // new BarrierSample(args.Length == 1 && args[0] == "use-barrier").Run();
             // new BeginEndInvokeSample().Run();
             // new ClosureSample().Run();
@@ -21,7 +21,7 @@
             // new InterlockedIncrementSample().Run();
             // new LockFreeSample().Run();
             // new LockFreeSample2().Run();
-            new MemoryVisibilitySample().Run();
+            // new MemoryVisibilitySample().Run();
             // new MonitorRaceSample().Run();
             // new MutexOwnership().CanEnsureOwnership();
             // new OptimisticConcurrencySample().Run();
